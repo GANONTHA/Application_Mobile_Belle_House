@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class MainPropertyPage extends StatelessWidget {
@@ -6,22 +7,36 @@ class MainPropertyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Row(children: [
-          //first component
-          const Row(
-            children: [Text('Icon'), Text('Niamey'), Text('Niger')],
-          ),
+      backgroundColor: AppColors.backgroundColor,
+      body: Column(
+        children: [
           Container(
-            height: 45,
-            width: 45,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(10),
-            ),
-          )
-          //second component
-        ]),
+            margin: EdgeInsets.only(top: 25, left: 10, right: 10),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //first component
+                  const Row(
+                    children: [Text('Icon'), Text('Niamey'), Text('Niger')],
+                  ),
+                  Center(
+                    child: Container(
+                      height: 45,
+                      width: 45,
+                      child: Icon(
+                        Icons.punch_clock,
+                        color: AppColors.iconColor1,
+                      ),
+                      decoration: BoxDecoration(
+                        color: AppColors.secondaryColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  )
+                  //second component
+                ]),
+          ),
+        ],
       ),
     );
   }
