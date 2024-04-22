@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
+import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:flutter/material.dart';
 
 class MainPropertyPage extends StatelessWidget {
@@ -16,10 +17,10 @@ class MainPropertyPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //first component
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.location_on, color: AppColors.iconColor1),
-                      Text('Niamey'),
+                      BigText(text: 'Niamey'),
                       Icon(
                         Icons.arrow_drop_down,
                         color: AppColors.iconColor1,
