@@ -11,20 +11,27 @@ class MainPropertyPage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 25, left: 10, right: 10),
+            margin: EdgeInsets.only(top: 30, left: 10, right: 10),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //first component
                   const Row(
-                    children: [Text('Icon'), Text('Niamey'), Text('Niger')],
+                    children: [
+                      Icon(Icons.location_on, color: AppColors.iconColor1),
+                      Text('Niamey'),
+                      Icon(
+                        Icons.arrow_drop_down,
+                        color: AppColors.iconColor1,
+                      ),
+                    ],
                   ),
                   Center(
                     child: Container(
                       height: 45,
                       width: 45,
                       child: Icon(
-                        Icons.punch_clock,
+                        Icons.notifications,
                         color: AppColors.iconColor1,
                       ),
                       decoration: BoxDecoration(
