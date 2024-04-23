@@ -1,7 +1,9 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
+import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MainPropertyPage extends StatelessWidget {
   const MainPropertyPage({super.key});
@@ -38,6 +40,27 @@ class MainPropertyPage extends StatelessWidget {
                   //second component
                 ]),
           ),
+          SizedBox(height: 20),
+          Row(
+            children: [
+              // search bar
+              Expanded(
+                  flex: 6,
+                  child: TextFielSearch(
+                    controller: TextEditingController(),
+                    onChanged: (value) {},
+                  )),
+              SizedBox(width: 10),
+              // filter icon
+              Expanded(
+                flex: 1,
+                child: const IconElement(
+                    bgColor: AppColors.secondaryColor,
+                    icon: Icons.filter_list,
+                    color: AppColors.iconColor1),
+              ),
+            ],
+          )
         ],
       ),
     );
