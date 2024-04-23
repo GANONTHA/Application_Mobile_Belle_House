@@ -11,13 +11,23 @@ class TextFielSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 43,
+      margin: const EdgeInsets.only(left: 10),
+      height: 50,
       child: TextField(
         decoration: InputDecoration(
             filled: true,
             fillColor: AppColors.secondaryColor,
-            hintText: 'Search',
-            prefixIcon: const Icon(Icons.search),
+            hintText: 'Tapez pour rechercher',
+            hintStyle: const TextStyle(
+              color: Colors.black,
+              fontSize: 17,
+              letterSpacing: 1.2,
+            ),
+            prefixIcon: const Icon(
+              Icons.search,
+              size: 35,
+              color: AppColors.iconColor1,
+            ),
             border: OutlineInputBorder(
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(10))),
