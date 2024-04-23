@@ -74,7 +74,7 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           //menu items
           const Padding(
             padding: EdgeInsets.only(left: 10.0),
@@ -99,7 +99,24 @@ class MainPropertyPage extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          const SizedBox(height: 10),
+          //popular properties
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: BigText(text: 'PLUS POPULAIRES'),
+              ),
+              MenuItem(
+                title: 'Voir+',
+                color: AppColors.iconColor1,
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          //listings
         ],
       ),
     );
