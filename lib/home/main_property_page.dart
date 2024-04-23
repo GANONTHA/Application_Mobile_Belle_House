@@ -2,9 +2,9 @@ import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
+import 'package:belle_house_mobile_app/widgets/popular_property.dart';
 import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class MainPropertyPage extends StatelessWidget {
   const MainPropertyPage({super.key});
@@ -117,6 +117,15 @@ class MainPropertyPage extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           //listings
+          PopularProperty(
+            image: Image.asset('assets/images/house-1.jpg'),
+            area: 'Francophonie',
+            bed: 2,
+            city: 'Pala',
+            bedroom: 2,
+            type: 'Vente',
+            price: 2000,
+          ),
         ],
       ),
     );
