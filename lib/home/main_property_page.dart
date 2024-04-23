@@ -1,6 +1,7 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
+import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,6 +15,7 @@ class MainPropertyPage extends StatelessWidget {
       backgroundColor: AppColors.backgroundColor,
       body: Column(
         children: [
+          //heading
           Container(
             margin: const EdgeInsets.only(top: 30, left: 10, right: 10),
             child: Row(
@@ -41,6 +43,7 @@ class MainPropertyPage extends StatelessWidget {
                 ]),
           ),
           SizedBox(height: 20),
+          //search bar
           Row(
             children: [
               // search bar
@@ -60,6 +63,42 @@ class MainPropertyPage extends StatelessWidget {
                     color: AppColors.iconColor1),
               ),
             ],
+          ),
+          //navigation menu
+          SizedBox(height: 20),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: BigText(text: 'CATEGORIES'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          //menu items
+          const Padding(
+            padding: EdgeInsets.only(left: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MenuItem(
+                  title: 'Maison',
+                  bgColor: AppColors.iconColor1,
+                ),
+                MenuItem(
+                  title: 'Parcelles',
+                  color: AppColors.iconColor1,
+                ),
+                MenuItem(
+                  title: 'Meubles',
+                  color: AppColors.iconColor1,
+                ),
+                MenuItem(
+                  title: 'Autres',
+                  color: AppColors.iconColor1,
+                ),
+              ],
+            ),
           )
         ],
       ),
