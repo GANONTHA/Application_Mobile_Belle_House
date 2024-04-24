@@ -119,7 +119,7 @@ class MainPropertyPage extends StatelessWidget {
           const SizedBox(height: 10),
           //listings
 
-          PropertyPageBuilder(),
+          const PropertyPageBuilder(),
           //near you
           const SizedBox(height: 10),
           Row(
@@ -143,7 +143,7 @@ class MainPropertyPage extends StatelessWidget {
               area: 'Banifandou',
               bed: 02,
               toilette: 05,
-              type: 'Location')
+              type: 'Location'),
         ],
       ),
     );

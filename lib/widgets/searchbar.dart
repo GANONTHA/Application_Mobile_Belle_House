@@ -17,8 +17,8 @@ class TextFielSearch extends StatelessWidget {
           BoxShadow(
             color: Colors.black12,
             // spreadRadius: 1,
-            blurRadius: 5,
-            offset: Offset(0, 3), // changes position of shadow
+            blurRadius: 1,
+            offset: Offset(0, 1), // changes position of shadow
           )
         ],
       ),

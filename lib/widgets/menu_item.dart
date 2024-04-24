@@ -24,14 +24,14 @@ class MenuItem extends StatelessWidget {
           BoxShadow(
             color: Colors.black12,
             // spreadRadius: 1,
-            blurRadius: 5,
-            offset: Offset(0, 2), // changes position of shadow
+            blurRadius: 1,
+            offset: Offset(0, 1), // changes position of shadow
           ),
           BoxShadow(
             color: Colors.black12,
             // spreadRadius: 1,
-            blurRadius: 5,
-            offset: Offset(2, 0), // changes position of shadow
+            blurRadius: 1,
+            offset: Offset(1, 0), // changes position of shadow
           ),
         ],
       ),
