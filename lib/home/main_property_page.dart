@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/home/property_page_builder.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
@@ -118,15 +119,8 @@ class MainPropertyPage extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           //listings
-          PopularProperty(
-            image: Image.asset('assets/images/house-1.jpg'),
-            area: 'Francophonie',
-            bed: 03,
-            city: 'Pala',
-            bedroom: 2,
-            type: 'Vente',
-            price: 2000,
-          ),
+
+          PropertyPageBuilder(),
           //near you
           const SizedBox(height: 10),
           Row(

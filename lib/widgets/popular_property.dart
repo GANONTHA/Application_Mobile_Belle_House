@@ -25,7 +25,7 @@ class PopularProperty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 270,
+      height: 200,
       width: MediaQuery.of(context).size.width * 0.7,
       child: Container(
         decoration: BoxDecoration(
