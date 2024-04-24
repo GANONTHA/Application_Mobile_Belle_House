@@ -10,7 +10,7 @@ class IconWithName extends StatelessWidget {
     required this.number,
     required this.name,
     required this.icon,
-    this.color = Colors.black45,
+    this.color = Colors.black,
   });
 
   @override

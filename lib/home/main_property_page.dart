@@ -2,6 +2,7 @@ import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
+import 'package:belle_house_mobile_app/widgets/nearly_property.dart';
 import 'package:belle_house_mobile_app/widgets/popular_property.dart';
 import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class MainPropertyPage extends StatelessWidget {
                   //second component
                 ]),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           //search bar
           Row(
             children: [
@@ -53,11 +54,11 @@ class MainPropertyPage extends StatelessWidget {
                     controller: TextEditingController(),
                     onChanged: (value) {},
                   )),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               // filter icon
-              Expanded(
+              const Expanded(
                 flex: 1,
-                child: const IconElement(
+                child: IconElement(
                     bgColor: AppColors.secondaryColor,
                     icon: Icons.filter_list,
                     color: AppColors.iconColor1),
@@ -65,7 +66,7 @@ class MainPropertyPage extends StatelessWidget {
             ],
           ),
           //navigation menu
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: [
               Padding(
@@ -109,7 +110,7 @@ class MainPropertyPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10.0),
                 child: BigText(text: 'PLUS POPULAIRES'),
               ),
-              MenuItem(
+              const MenuItem(
                 title: 'Voir+',
                 color: AppColors.iconColor1,
               ),
@@ -120,12 +121,36 @@ class MainPropertyPage extends StatelessWidget {
           PopularProperty(
             image: Image.asset('assets/images/house-1.jpg'),
             area: 'Francophonie',
-            bed: 2,
+            bed: 03,
             city: 'Pala',
             bedroom: 2,
             type: 'Vente',
             price: 2000,
           ),
+          //near you
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: BigText(text: 'PROCHES DE VOUS'),
+              ),
+              const MenuItem(
+                title: 'Voir+',
+                color: AppColors.iconColor1,
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          //listings
+          NearlyProperty(
+              image: Image.asset('assets/images/house-2.jpg'),
+              price: 500000,
+              area: 'Banifandou',
+              bed: 02,
+              toilette: 05,
+              type: 'Location')
         ],
       ),
     );

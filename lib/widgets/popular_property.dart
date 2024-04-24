@@ -48,7 +48,7 @@ class PopularProperty extends StatelessWidget {
             Stack(
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(10),
                     topRight: Radius.circular(10),
                   ),
@@ -97,16 +97,16 @@ class PopularProperty extends StatelessWidget {
                   ],
                 ),
                 //bed and bedrooms
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconWithName(
-                      number: 2,
+                      number: bedroom,
                       name: 'Chambres',
                       icon: Icons.bed,
                     ),
                     IconWithName(
-                        number: 03, name: 'Toilettes', icon: Icons.shower)
+                        number: bed, name: 'Toilettes', icon: Icons.shower)
                   ],
                 )
               ],
