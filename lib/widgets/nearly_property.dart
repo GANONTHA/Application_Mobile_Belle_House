@@ -26,13 +26,14 @@ class NearlyProperty extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.8,
       height: 110,
       decoration: BoxDecoration(
+          border: Border.all(color: AppColors.primaryColor, width: 1),
           color: AppColors.secondaryColor,
           borderRadius: const BorderRadius.all(
             Radius.circular(10),
           ),
           boxShadow: [
             BoxShadow(
-              color: AppColors.secondaryColor.withOpacity(0.5),
+              color: AppColors.secondaryColor.withOpacity(0.9),
               spreadRadius: 5,
               blurRadius: 7,
               offset: const Offset(0, 3), // changes position of shadow

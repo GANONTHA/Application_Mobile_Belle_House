@@ -4,7 +4,6 @@ import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:belle_house_mobile_app/widgets/nearly_property.dart';
-import 'package:belle_house_mobile_app/widgets/popular_property.dart';
 import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
 

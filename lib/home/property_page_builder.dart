@@ -9,13 +9,14 @@ class PropertyPageBuilder extends StatefulWidget {
 }
 
 class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
+  PageController pageController = PageController(viewportFraction: 0.78);
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       height: 330,
       margin: EdgeInsets.all(10),
       child: PageView.builder(
+          controller: pageController,
           itemCount: 5,
           itemBuilder: (context, position) {
             return _buildPageItem(position);
@@ -26,6 +27,7 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
 
 Widget _buildPageItem(int index) {
   return Container(
+    margin: EdgeInsets.only(left: 10, right: 10),
     child: PopularProperty(
       image: Image.asset('assets/images/house-1.jpg'),
       area: 'Francophonie',
