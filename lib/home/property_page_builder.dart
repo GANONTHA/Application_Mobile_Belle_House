@@ -51,6 +51,8 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
           decorator: DotsDecorator(
             color: Colors.grey,
             activeColor: AppColors.primaryColor,
+            size: const Size.square(9.0),
+            activeSize: const Size(18.0, 9.0),
             activeShape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           ),
