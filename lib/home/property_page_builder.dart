@@ -11,7 +11,8 @@ class PropertyPageBuilder extends StatefulWidget {
 class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
   PageController pageController = PageController(viewportFraction: 0.78);
   var _currPageValue = 0.0;
-
+  double _scaleFactor = 0.8;
+  final double _height = 300;
   @override
   void initState() {
     super.initState();
@@ -40,19 +41,46 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
           }),
     );
   }
-}
 
-Widget _buildPageItem(int index) {
-  return Container(
-    margin: EdgeInsets.only(left: 10, right: 10),
-    child: PopularProperty(
-      image: Image.asset('assets/images/house-1.jpg'),
-      area: 'Francophonie',
-      bed: 03,
-      city: 'Pala',
-      bedroom: 2,
-      type: 'Vente',
-      price: 2000,
-    ),
-  );
+  Widget _buildPageItem(int index) {
+    Matrix4 matrix = Matrix4.identity();
+    if (index == _currPageValue.floor()) {
+      var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
+      var currTrans = _height * (1 - currScale) / 2;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, currTrans, 0);
+    } else if (index == _currPageValue.floor() + 1) {
+      var currScale =
+          _scaleFactor + (_currPageValue - index + 1) * (1 - _scaleFactor);
+      var currTrans = _height * (1 - currScale) / 2;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, currTrans, 0);
+    } else if (index == _currPageValue.floor() - 1) {
+      var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
+      var currTrans = _height * (1 - currScale) / 2;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, currTrans, 0);
+    } else {
+      var currScale = 0.8;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, _height * (1 - _scaleFactor) / 2, 1);
+    }
+
+    return Transform(
+      transform: matrix,
+      child: Container(
+        height: _height,
+        margin: const EdgeInsets.only(left: 10, right: 10),
+        child: PopularProperty(
+          image: Image.asset('assets/images/house-1.jpg'),
+          area: 'Francophonie',
+          bed: 03,
+          city: 'Pala',
+          bedroom: 2,
+          type: 'Vente',
+          price: 2000,
+        ),
+      ),
+    );
+  }
 }
