@@ -12,6 +12,16 @@ class TextFielSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 10),
+      decoration: const BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            // spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(0, 3), // changes position of shadow
+          )
+        ],
+      ),
       height: 50,
       child: TextField(
         decoration: InputDecoration(
