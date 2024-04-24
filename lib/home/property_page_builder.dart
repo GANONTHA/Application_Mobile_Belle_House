@@ -13,7 +13,7 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 330,
+      height: 300,
       margin: EdgeInsets.all(10),
       child: PageView.builder(
           controller: pageController,

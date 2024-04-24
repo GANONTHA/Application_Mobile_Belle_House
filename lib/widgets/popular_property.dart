@@ -24,96 +24,97 @@ class PopularProperty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 200,
-      width: MediaQuery.of(context).size.width * 0.6,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(
-            Radius.circular(10),
+    return Stack(
+      children: [
+        //image with like (heart) button in a stack widget
+        Container(
+          height: 300,
+          child: Stack(
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(10),
+                ),
+                child: image,
+              ),
+              Positioned(
+                  left: 2,
+                  top: 2,
+                  child: IconButton(
+                    icon: Icon(Icons.favorite_border),
+                    onPressed: () {},
+                  ))
+            ],
           ),
-          color: AppColors.secondaryColor,
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.iconColor1.withOpacity(0.3),
-              spreadRadius: 3,
-              blurRadius: 10,
-              offset: Offset(0, 6), // changes position of shadow
-            ),
-          ],
         ),
-        child: Column(
-          children: [
-            //image with like (heart) button in a stack widget
-            Stack(
-              children: [
-                ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                  ),
-                  child: image,
-                ),
-                Positioned(
-                    left: 2,
-                    top: 2,
-                    child: IconButton(
-                      icon: Icon(Icons.favorite_border),
-                      onPressed: () {},
-                    ))
-              ],
-            ),
 
-            //property details
-            Column(
-              children: [
-                //price and type
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    BigText(
-                      text: '$type',
-                      color: Colors.black,
-                      fontSize: 16,
-                    ),
-                    BigText(
-                      text: '$price FCFA',
-                      color: AppColors.iconColor1,
-                      fontSize: 16,
-                    )
-                  ],
-                ),
-                const SizedBox(height: 6),
-                //area and city
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.location_on,
-                      color: AppColors.iconColor1,
-                    ),
-                    Text(city),
-                    const Text('-'),
-                    Text(area)
-                  ],
-                ),
-                //bed and bedrooms
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconWithName(
-                      number: bedroom,
-                      name: 'Chambres',
-                      icon: Icons.bed,
-                    ),
-                    IconWithName(
-                        number: bed, name: 'Toilettes', icon: Icons.shower)
-                  ],
-                )
-              ],
-            )
-          ],
-        ),
-      ),
+        //property details
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            margin: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+              color: Color.fromARGB(166, 132, 200, 222),
+            ),
+            height: 140,
+            child: Container(
+              padding: const EdgeInsets.only(
+                  top: 10, left: 15, right: 15, bottom: 5),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //price and type
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      BigText(
+                        text: type,
+                        color: Colors.black,
+                        fontSize: 16,
+                      ),
+                      BigText(
+                        text: '$price FCFA',
+                        color: AppColors.secondaryColor,
+                        fontSize: 16,
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  //area and city
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.location_on,
+                        color: AppColors.textColor,
+                      ),
+                      Text(city),
+                      const Text('-'),
+                      Text(area)
+                    ],
+                  ),
+                  //bed and bedrooms
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconWithName(
+                        number: bedroom,
+                        name: 'Chambres',
+                        icon: Icons.bed,
+                      ),
+                      IconWithName(
+                          number: bed, name: 'Toilettes', icon: Icons.shower)
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
