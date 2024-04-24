@@ -52,20 +52,31 @@ class PopularProperty extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [Text(type), Text('$price')],
               ),
-              SizedBox(height: 6),
+              const SizedBox(height: 6),
               //area and city
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.location_on,
                   ),
                   Text(city),
-                  Text('-'),
+                  const Text('-'),
                   Text(area)
                 ],
               ),
               //bed and bedrooms
-              IconWithName(bedroom: '3', bed: '3')
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconWithName(
+                    number: 2,
+                    name: 'Chambres',
+                    icon: Icon(Icons.bed),
+                  ),
+                  IconWithName(
+                      number: 03, name: 'Toilettes', icon: Icon(Icons.shower))
+                ],
+              )
             ],
           )
         ],

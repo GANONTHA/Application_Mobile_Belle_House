@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 
 class IconWithName extends StatelessWidget {
-  final String bedroom;
-  final String bed;
-  const IconWithName({super.key, required this.bedroom, required this.bed});
+  final Icon icon;
+  final int number;
+  final String name;
+  const IconWithName(
+      {super.key,
+      required this.number,
+      required this.name,
+      required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(Icons.bedroom_baby),
+        icon,
         Row(
-          children: [Text(bed), Text('02 Chambre')],
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [Text('$number'), Text(name)],
         )
       ],
     );
