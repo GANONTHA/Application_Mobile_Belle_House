@@ -52,65 +52,68 @@ class PopularProperty extends StatelessWidget {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
+            padding: EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
             margin: const EdgeInsets.only(left: 20, right: 20, bottom: 15),
             decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
               ),
-              color: Color.fromARGB(166, 132, 200, 222),
+              color: AppColors.secondaryColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 2,
+                  offset: Offset(2, 5),
+                )
+              ],
             ),
             height: 140,
-            child: Container(
-              padding: const EdgeInsets.only(
-                  top: 10, left: 15, right: 15, bottom: 5),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  //price and type
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      BigText(
-                        text: type,
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
-                      BigText(
-                        text: '$price FCFA',
-                        color: AppColors.secondaryColor,
-                        fontSize: 16,
-                      )
-                    ],
-                  ),
-                  const SizedBox(height: 6),
-                  //area and city
-                  Row(
-                    children: [
-                      const Icon(
-                        Icons.location_on,
-                        color: AppColors.textColor,
-                      ),
-                      Text(city),
-                      const Text('-'),
-                      Text(area)
-                    ],
-                  ),
-                  //bed and bedrooms
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconWithName(
-                        number: bedroom,
-                        name: 'Chambres',
-                        icon: Icons.bed,
-                      ),
-                      IconWithName(
-                          number: bed, name: 'Toilettes', icon: Icons.shower)
-                    ],
-                  )
-                ],
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //price and type
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    BigText(
+                      text: type,
+                      color: Colors.black,
+                      fontSize: 16,
+                    ),
+                    BigText(
+                      text: '$price FCFA',
+                      color: AppColors.primaryColor,
+                      fontSize: 16,
+                    )
+                  ],
+                ),
+                const SizedBox(height: 6),
+                //area and city
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.location_on,
+                      color: AppColors.textColor,
+                    ),
+                    Text(city),
+                    const Text('-'),
+                    Text(area)
+                  ],
+                ),
+                //bed and bedrooms
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconWithName(
+                      number: bedroom,
+                      name: 'Chambres',
+                      icon: Icons.bed,
+                    ),
+                    IconWithName(
+                        number: bed, name: 'Toilettes', icon: Icons.shower)
+                  ],
+                )
+              ],
             ),
           ),
         )
