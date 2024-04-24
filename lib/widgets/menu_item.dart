@@ -20,6 +20,20 @@ class MenuItem extends StatelessWidget {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(5),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            // spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(0, 2), // changes position of shadow
+          ),
+          BoxShadow(
+            color: Colors.black12,
+            // spreadRadius: 1,
+            blurRadius: 5,
+            offset: Offset(2, 0), // changes position of shadow
+          ),
+        ],
       ),
       child: Center(
         child: Text(

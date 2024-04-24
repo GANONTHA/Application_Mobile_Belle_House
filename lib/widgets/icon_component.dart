@@ -19,9 +19,16 @@ class IconElement extends StatelessWidget {
       height: 45,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: BorderRadius.circular(10),
-      ),
+          color: bgColor,
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black12,
+              // spreadRadius: 1,
+              blurRadius: 5,
+              offset: Offset(0, 3), // changes position of shadow
+            )
+          ]),
       child: Center(
         child: Icon(
           icon,
