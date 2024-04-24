@@ -10,6 +10,23 @@ class PropertyPageBuilder extends StatefulWidget {
 
 class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
   PageController pageController = PageController(viewportFraction: 0.78);
+  var _currPageValue = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+    pageController.addListener(() {
+      setState(() {
+        _currPageValue = pageController.page!;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
