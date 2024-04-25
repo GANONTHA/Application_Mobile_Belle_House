@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class TextFielSearch extends StatelessWidget {
@@ -11,7 +12,7 @@ class TextFielSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 10),
+      margin: EdgeInsets.only(left: Dimension.paddingTen),
       decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -22,27 +23,28 @@ class TextFielSearch extends StatelessWidget {
           )
         ],
       ),
-      height: 40,
+      height: Dimension.sizeFourthy,
       child: TextField(
         textAlign: TextAlign.start,
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+            contentPadding: EdgeInsets.fromLTRB(
+                0, Dimension.paddingTen, 0, Dimension.paddingTen),
             filled: true,
             fillColor: AppColors.secondaryColor,
             hintText: 'Tapez pour rechercher',
-            hintStyle: const TextStyle(
+            hintStyle: TextStyle(
               color: Colors.black,
-              fontSize: 17,
+              fontSize: Dimension.sizeSixteen,
               letterSpacing: 1.2,
             ),
-            prefixIcon: const Icon(
+            prefixIcon: Icon(
               Icons.search,
-              size: 35,
+              size: Dimension.sizeThirtyFive,
               color: AppColors.iconColor1,
             ),
             border: OutlineInputBorder(
                 borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(10))),
+                borderRadius: BorderRadius.circular(Dimension.paddingTen))),
       ),
     );
   }

@@ -18,6 +18,8 @@ class Dimension {
   static double sizeTwo = 0;
   static double sizeEight = 0;
   static double sizeTenZero = 0;
+  static double sizeFourthy = 0;
+  static double sizeThirtyFive = 0;
 
   static void init(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
@@ -36,5 +38,7 @@ class Dimension {
     sizeSixteen = screenHeight / 52.68;
     sizeTenZero = screenHeight / 7.66;
     sizeEight = screenHeight / 110.37;
+    sizeFourthy = screenHeight / 21.07;
+    sizeThirtyFive = screenHeight / 24.1;
   }
 }

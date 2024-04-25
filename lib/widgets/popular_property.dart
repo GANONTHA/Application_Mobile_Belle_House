@@ -27,7 +27,7 @@ class PopularProperty extends StatelessWidget {
     return Stack(
       children: [
         //image with like (heart) button in a stack widget
-        Container(
+        SizedBox(
           height: Dimension.pageViewContainer,
           child: Stack(
             children: [
