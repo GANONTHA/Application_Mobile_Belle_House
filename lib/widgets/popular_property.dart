@@ -32,14 +32,14 @@ class PopularProperty extends StatelessWidget {
           child: Stack(
             children: [
               ClipRRect(
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(10),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(Dimension.paddingTen),
                 ),
                 child: image,
               ),
               Positioned(
-                  left: 2,
-                  top: 2,
+                  left: Dimension.sizeTwo,
+                  top: Dimension.sizeTwo,
                   child: IconButton(
                     icon: const Icon(Icons.favorite_border),
                     onPressed: () {},
@@ -52,28 +52,34 @@ class PopularProperty extends StatelessWidget {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            padding:
-                const EdgeInsets.only(left: 10, top: 10, right: 10, bottom: 10),
-            margin: const EdgeInsets.only(left: 20, right: 20, bottom: 2),
-            decoration: const BoxDecoration(
+            padding: EdgeInsets.only(
+                left: Dimension.paddingTen,
+                top: Dimension.paddingTen,
+                right: Dimension.paddingTen,
+                bottom: Dimension.paddingTen),
+            margin: EdgeInsets.only(
+                left: Dimension.paddingTwenty,
+                right: Dimension.paddingTwenty,
+                bottom: Dimension.sizeTwo),
+            decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
-                Radius.circular(20),
+                Radius.circular(Dimension.paddingTwenty),
               ),
               color: AppColors.secondaryColor,
               boxShadow: [
                 BoxShadow(
                   color: Colors.black26,
-                  blurRadius: 2,
-                  offset: Offset(2, 5),
+                  blurRadius: Dimension.sizeTwo,
+                  offset: Offset(Dimension.sizeTwo, Dimension.sizeFive),
                 ),
                 BoxShadow(
                   color: Colors.black12,
-                  // blurRadius: 2,
-                  offset: Offset(-2, -5),
+                  // blurRadius: Dimension.sizeTwo,
+                  offset: Offset(-Dimension.sizeTwo, -Dimension.sizeFive),
                 ),
               ],
             ),
-            height: 70,
+            height: Dimension.pageViewDetails,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -84,46 +90,33 @@ class PopularProperty extends StatelessWidget {
                     BigText(
                       text: type,
                       color: Colors.black,
-                      fontSize: 14,
+                      fontSize: Dimension.sizeFourteen,
                     ),
                     BigText(
                       text: '$price FCFA',
                       color: AppColors.primaryColor,
-                      fontSize: 14,
+                      fontSize: Dimension.sizeFourteen,
                     )
                   ],
                 ),
-                const SizedBox(height: 6),
+                SizedBox(height: Dimension.sizeFive),
                 //area and city
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.location_on,
                       color: AppColors.textColor,
-                      size: 13,
+                      size: Dimension.sizeTwelve,
                     ),
                     Text(
                       city,
-                      style: const TextStyle(fontSize: 12),
+                      style: TextStyle(fontSize: Dimension.sizeTwelve),
                     ),
                     const Text('-'),
                     Text(area)
                   ],
                 ),
-                //bed and bedrooms
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     IconWithName(
-                //       number: bedroom,
-                //       name: 'Chambres',
-                //       icon: Icons.bed,
-                //     ),
-                //     IconWithName(
-                //         number: bed, name: 'Toilettes', icon: Icons.shower)
-                //   ],
-                // )
               ],
             ),
           ),

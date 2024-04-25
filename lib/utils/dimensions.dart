@@ -6,10 +6,35 @@ class Dimension {
 
   //container
   static double pageViewContainer = 0;
+  static double pageViewDetails = 0;
+  static double paddingTen = 0;
+  static double paddingTwenty = 0;
+  static double sizeFourteen = 0;
+  static double sizeTwelve = 0;
+  static double sizeThirty = 0;
+  static double sizeFithteen = 0;
+  static double sizeSixteen = 0;
+  static double sizeFive = 0;
+  static double sizeTwo = 0;
+  static double sizeEight = 0;
+  static double sizeTenZero = 0;
 
   static void init(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
+
     pageViewContainer = screenHeight / 3.84;
+    pageViewDetails = screenHeight / 12.04;
+    paddingTen = screenHeight / 84.3;
+    paddingTwenty = screenHeight / 42.15;
+    sizeTwelve = screenHeight / 70.25;
+    sizeFourteen = screenHeight / 60.21;
+    sizeFithteen = screenHeight / 56.2;
+    sizeTwo = screenHeight / 320.5;
+    sizeFive = screenHeight / 128.2;
+    sizeThirty = screenHeight / 28.1;
+    sizeSixteen = screenHeight / 52.68;
+    sizeTenZero = screenHeight / 7.66;
+    sizeEight = screenHeight / 110.37;
   }
 }

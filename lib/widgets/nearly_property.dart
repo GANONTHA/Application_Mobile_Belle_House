@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_with_name.dart';
 import 'package:flutter/material.dart';
@@ -25,14 +26,14 @@ class NearlyProperty extends StatelessWidget {
     return Center(
       child: Container(
         width: MediaQuery.of(context).size.width * 0.9,
-        height: 110,
-        decoration: const BoxDecoration(
+        height: Dimension.sizeTenZero,
+        decoration: BoxDecoration(
             // border: Border.all(color: AppColors.primaryColor, width: 1),
             color: AppColors.secondaryColor,
             borderRadius: BorderRadius.all(
-              Radius.circular(10),
+              Radius.circular(Dimension.paddingTen),
             ),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.black12,
                 spreadRadius: 1,
@@ -52,14 +53,14 @@ class NearlyProperty extends StatelessWidget {
             children: [
               //image
               Expanded(
-                flex: 2,
+                flex: Dimension.sizeTwo.toInt(),
                 child: Container(
-                  height: 110,
+                  height: Dimension.sizeTenZero,
                   width: MediaQuery.of(context).size.width * 0.4,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      bottomLeft: Radius.circular(10),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(Dimension.paddingTen),
+                      bottomLeft: Radius.circular(Dimension.paddingTen),
                     ),
                     image:
                         DecorationImage(image: image.image, fit: BoxFit.cover),
@@ -69,20 +70,23 @@ class NearlyProperty extends StatelessWidget {
 
               //property details
               Expanded(
-                flex: 2,
+                flex: Dimension.sizeTwo.toInt(),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: EdgeInsets.only(left: Dimension.sizeEight),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      BigText(text: type),
+                      BigText(
+                        text: type,
+                        fontSize: Dimension.sizeSixteen,
+                      ),
                       //location
                       Row(
                         children: [
                           const Icon(Icons.location_on),
                           BigText(
                             text: area,
-                            fontSize: 16,
+                            fontSize: Dimension.sizeSixteen,
                           ),
                         ],
                       ),

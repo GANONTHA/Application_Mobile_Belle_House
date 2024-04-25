@@ -89,7 +89,8 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
       transform: matrix,
       child: Container(
         height: _height,
-        margin: const EdgeInsets.only(left: 10, right: 10),
+        margin: EdgeInsets.only(
+            left: Dimension.paddingTen, right: Dimension.paddingTen),
         child: PopularProperty(
           image: Image.asset('assets/images/house-1.jpg'),
           area: 'Francophonie',

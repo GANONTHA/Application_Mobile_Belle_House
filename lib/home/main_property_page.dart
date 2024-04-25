@@ -1,5 +1,6 @@
 import 'package:belle_house_mobile_app/home/property_page_builder.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
@@ -19,7 +20,10 @@ class MainPropertyPage extends StatelessWidget {
         children: [
           //heading
           Container(
-            margin: const EdgeInsets.only(top: 30, left: 10, right: 10),
+            margin: EdgeInsets.only(
+                top: Dimension.sizeThirty,
+                left: Dimension.paddingTen,
+                right: Dimension.paddingTen),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -28,7 +32,7 @@ class MainPropertyPage extends StatelessWidget {
                     children: [
                       const Icon(Icons.location_on,
                           color: AppColors.iconColor1),
-                      BigText(text: 'Niamey'),
+                      BigText(text: 'Niamey', fontSize: Dimension.sizeSixteen),
                       const Icon(
                         Icons.arrow_drop_down,
                         color: AppColors.iconColor1,
@@ -44,18 +48,18 @@ class MainPropertyPage extends StatelessWidget {
                   //second component
                 ]),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           //search bar
           Row(
             children: [
               // search bar
               Expanded(
-                  flex: 6,
+                  flex: Dimension.sizeFive.toInt(),
                   child: TextFielSearch(
                     controller: TextEditingController(),
                     onChanged: (value) {},
                   )),
-              const SizedBox(width: 10),
+              SizedBox(width: Dimension.paddingTen),
               // filter icon
               const Expanded(
                 flex: 1,
@@ -67,20 +71,23 @@ class MainPropertyPage extends StatelessWidget {
             ],
           ),
           //navigation menu
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: BigText(text: 'CATEGORIES'),
+                padding: EdgeInsets.only(left: Dimension.paddingTen),
+                child: BigText(
+                  text: 'CATEGORIES',
+                  fontSize: Dimension.sizeSixteen,
+                ),
               ),
             ],
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           //menu items
-          const Padding(
-            padding: EdgeInsets.only(left: 10.0),
-            child: Row(
+          Padding(
+            padding: EdgeInsets.only(left: Dimension.paddingTen),
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 MenuItem(
@@ -102,14 +109,17 @@ class MainPropertyPage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           //popular properties
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: BigText(text: 'PLUS POPULAIRES'),
+                padding: EdgeInsets.only(left: Dimension.paddingTen),
+                child: BigText(
+                  text: 'PLUS POPULAIRES',
+                  fontSize: Dimension.sizeSixteen,
+                ),
               ),
               const MenuItem(
                 title: 'Voir+',
@@ -117,18 +127,21 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           //listings
 
           const PropertyPageBuilder(),
           //near you
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: BigText(text: 'PROCHES DE VOUS'),
+                padding: EdgeInsets.only(left: Dimension.paddingTen),
+                child: BigText(
+                  text: 'PROCHES DE VOUS',
+                  fontSize: Dimension.sizeSixteen,
+                ),
               ),
               const MenuItem(
                 title: 'Voir+',
@@ -136,7 +149,7 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: Dimension.sizeFive),
           //listings
           NearlyProperty(
               image: Image.asset('assets/images/house-2.jpg'),
