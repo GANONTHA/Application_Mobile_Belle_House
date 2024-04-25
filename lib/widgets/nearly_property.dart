@@ -25,18 +25,24 @@ class NearlyProperty extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.8,
       height: 110,
-      decoration: BoxDecoration(
-          border: Border.all(color: AppColors.primaryColor, width: 1),
+      decoration: const BoxDecoration(
+          // border: Border.all(color: AppColors.primaryColor, width: 1),
           color: AppColors.secondaryColor,
-          borderRadius: const BorderRadius.all(
+          borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),
           boxShadow: [
             BoxShadow(
-              color: AppColors.secondaryColor.withOpacity(0.9),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: const Offset(0, 3), // changes position of shadow
+              color: Colors.black12,
+              spreadRadius: 1,
+              blurRadius: 1,
+              offset: Offset(3, 3), // changes position of shadow
+            ),
+            BoxShadow(
+              color: Colors.black12,
+              spreadRadius: 1,
+              blurRadius: 1,
+              offset: Offset(-3, -3), // changes position of shadow
             ),
           ]),
       child: Expanded(

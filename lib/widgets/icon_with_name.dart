@@ -19,11 +19,18 @@ class IconWithName extends StatelessWidget {
       children: [
         Icon(
           icon,
+          size: 13,
           color: color,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: [Text('$number'), Text(name)],
+          children: [
+            Text('$number'),
+            Text(
+              name,
+              style: TextStyle(fontSize: 10),
+            )
+          ],
         )
       ],
     );

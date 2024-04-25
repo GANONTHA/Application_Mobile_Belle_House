@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/popular_property.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
   PageController pageController = PageController(viewportFraction: 0.78);
   var _currPageValue = 0.0;
   double _scaleFactor = 0.8;
-  final double _height = 300;
+  final double _height = Dimension.pageViewContainer;
   @override
   void initState() {
     super.initState();
@@ -36,7 +37,7 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
     return Column(
       children: [
         Container(
-          height: 300,
+          height: Dimension.pageViewContainer,
           margin: const EdgeInsets.all(10),
           child: PageView.builder(
               controller: pageController,

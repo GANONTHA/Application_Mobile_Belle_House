@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/home/main_property_page.dart';
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Dimension.init(context);
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
