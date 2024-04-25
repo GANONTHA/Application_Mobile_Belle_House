@@ -52,6 +52,7 @@ class PopularProperty extends StatelessWidget {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
+            constraints: BoxConstraints(minHeight: Dimension.pageViewDetails),
             padding: EdgeInsets.only(
                 left: Dimension.paddingTen,
                 top: Dimension.paddingTen,
@@ -80,44 +81,46 @@ class PopularProperty extends StatelessWidget {
               ],
             ),
             height: Dimension.pageViewDetails,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                //price and type
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    BigText(
-                      text: type,
-                      color: Colors.black,
-                      fontSize: Dimension.sizeFourteen,
-                    ),
-                    BigText(
-                      text: '$price FCFA',
-                      color: AppColors.primaryColor,
-                      fontSize: Dimension.sizeFourteen,
-                    )
-                  ],
-                ),
-                SizedBox(height: Dimension.sizeFive),
-                //area and city
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.location_on,
-                      color: AppColors.textColor,
-                      size: Dimension.sizeTwelve,
-                    ),
-                    Text(
-                      city,
-                      style: TextStyle(fontSize: Dimension.sizeTwelve),
-                    ),
-                    const Text('-'),
-                    Text(area)
-                  ],
-                ),
-              ],
+            child: Flexible(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //price and type
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      BigText(
+                        text: type,
+                        color: Colors.black,
+                        fontSize: Dimension.sizeFourteen,
+                      ),
+                      BigText(
+                        text: '$price FCFA',
+                        color: AppColors.primaryColor,
+                        fontSize: Dimension.sizeFourteen,
+                      )
+                    ],
+                  ),
+                  SizedBox(height: Dimension.sizeFive),
+                  //area and city
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        color: AppColors.textColor,
+                        size: Dimension.sizeTwelve,
+                      ),
+                      Text(
+                        city,
+                        style: TextStyle(fontSize: Dimension.sizeTwelve),
+                      ),
+                      const Text('-'),
+                      Text(area)
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         )
