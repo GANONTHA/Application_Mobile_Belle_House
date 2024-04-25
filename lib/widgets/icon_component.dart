@@ -9,7 +9,7 @@ class IconElement extends StatelessWidget {
     super.key,
     required this.icon,
     required this.color,
-    this.size = 35,
+    this.size = 30,
     this.bgColor,
   });
 
@@ -17,7 +17,7 @@ class IconElement extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 45,
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
           color: bgColor,
           borderRadius: BorderRadius.circular(10),

@@ -1,7 +1,6 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
-import 'package:belle_house_mobile_app/widgets/icon_with_name.dart';
 import 'package:flutter/material.dart';
 
 class PopularProperty extends StatelessWidget {
@@ -42,7 +41,7 @@ class PopularProperty extends StatelessWidget {
                   left: 2,
                   top: 2,
                   child: IconButton(
-                    icon: Icon(Icons.favorite_border),
+                    icon: const Icon(Icons.favorite_border),
                     onPressed: () {},
                   ))
             ],
@@ -74,7 +73,7 @@ class PopularProperty extends StatelessWidget {
                 ),
               ],
             ),
-            height: 100,
+            height: 70,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -97,6 +96,7 @@ class PopularProperty extends StatelessWidget {
                 const SizedBox(height: 6),
                 //area and city
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Icon(
                       Icons.location_on,
@@ -105,25 +105,25 @@ class PopularProperty extends StatelessWidget {
                     ),
                     Text(
                       city,
-                      style: TextStyle(fontSize: 12),
+                      style: const TextStyle(fontSize: 12),
                     ),
                     const Text('-'),
                     Text(area)
                   ],
                 ),
                 //bed and bedrooms
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconWithName(
-                      number: bedroom,
-                      name: 'Chambres',
-                      icon: Icons.bed,
-                    ),
-                    IconWithName(
-                        number: bed, name: 'Toilettes', icon: Icons.shower)
-                  ],
-                )
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     IconWithName(
+                //       number: bedroom,
+                //       name: 'Chambres',
+                //       icon: Icons.bed,
+                //     ),
+                //     IconWithName(
+                //         number: bed, name: 'Toilettes', icon: Icons.shower)
+                //   ],
+                // )
               ],
             ),
           ),

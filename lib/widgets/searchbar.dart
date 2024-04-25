@@ -26,7 +26,7 @@ class TextFielSearch extends StatelessWidget {
       child: TextField(
         textAlign: TextAlign.start,
         decoration: InputDecoration(
-            contentPadding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            contentPadding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
             filled: true,
             fillColor: AppColors.secondaryColor,
             hintText: 'Tapez pour rechercher',
