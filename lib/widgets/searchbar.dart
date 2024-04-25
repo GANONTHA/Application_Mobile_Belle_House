@@ -22,9 +22,11 @@ class TextFielSearch extends StatelessWidget {
           )
         ],
       ),
-      height: 50,
+      height: 40,
       child: TextField(
+        textAlign: TextAlign.start,
         decoration: InputDecoration(
+            contentPadding: EdgeInsets.fromLTRB(0, 10, 0, 10),
             filled: true,
             fillColor: AppColors.secondaryColor,
             hintText: 'Tapez pour rechercher',

@@ -15,6 +15,7 @@ class MainPropertyPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //heading
           Container(
@@ -43,7 +44,7 @@ class MainPropertyPage extends StatelessWidget {
                   //second component
                 ]),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 5),
           //search bar
           Row(
             children: [
@@ -66,7 +67,7 @@ class MainPropertyPage extends StatelessWidget {
             ],
           ),
           //navigation menu
-          const SizedBox(height: 20),
+          const SizedBox(height: 5),
           Row(
             children: [
               Padding(
@@ -75,7 +76,7 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           //menu items
           const Padding(
             padding: EdgeInsets.only(left: 10.0),
@@ -101,7 +102,7 @@ class MainPropertyPage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           //popular properties
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,12 +117,12 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           //listings
 
           const PropertyPageBuilder(),
           //near you
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -135,7 +136,7 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           //listings
           NearlyProperty(
               image: Image.asset('assets/images/house-2.jpg'),

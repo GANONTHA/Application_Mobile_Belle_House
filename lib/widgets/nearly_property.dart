@@ -22,84 +22,87 @@ class NearlyProperty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.8,
-      height: 110,
-      decoration: const BoxDecoration(
-          // border: Border.all(color: AppColors.primaryColor, width: 1),
-          color: AppColors.secondaryColor,
-          borderRadius: BorderRadius.all(
-            Radius.circular(10),
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black12,
-              spreadRadius: 1,
-              blurRadius: 1,
-              offset: Offset(3, 3), // changes position of shadow
+    return Center(
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: 110,
+        decoration: const BoxDecoration(
+            // border: Border.all(color: AppColors.primaryColor, width: 1),
+            color: AppColors.secondaryColor,
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
             ),
-            BoxShadow(
-              color: Colors.black12,
-              spreadRadius: 1,
-              blurRadius: 1,
-              offset: Offset(-3, -3), // changes position of shadow
-            ),
-          ]),
-      child: Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            //image
-            Expanded(
-              flex: 2,
-              child: Container(
-                height: 110,
-                width: MediaQuery.of(context).size.width * 0.4,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                spreadRadius: 1,
+                blurRadius: 1,
+                offset: Offset(3, 3), // changes position of shadow
+              ),
+              BoxShadow(
+                color: Colors.black12,
+                spreadRadius: 1,
+                blurRadius: 1,
+                offset: Offset(-3, -3), // changes position of shadow
+              ),
+            ]),
+        child: Expanded(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              //image
+              Expanded(
+                flex: 2,
+                child: Container(
+                  height: 110,
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                    ),
+                    image:
+                        DecorationImage(image: image.image, fit: BoxFit.cover),
                   ),
-                  image: DecorationImage(image: image.image, fit: BoxFit.cover),
                 ),
               ),
-            ),
 
-            //property details
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigText(text: type),
-                    //location
-                    Row(
-                      children: [
-                        const Icon(Icons.location_on),
-                        BigText(
-                          text: area,
-                          fontSize: 16,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconWithName(
-                            number: bed, name: 'Chambres', icon: Icons.bed),
-                        IconWithName(
-                            number: toilette,
-                            name: 'Toilettes',
-                            icon: Icons.bathtub),
-                      ],
-                    ),
-                  ],
+              //property details
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      BigText(text: type),
+                      //location
+                      Row(
+                        children: [
+                          const Icon(Icons.location_on),
+                          BigText(
+                            text: area,
+                            fontSize: 16,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          IconWithName(
+                              number: bed, name: 'Chambres', icon: Icons.bed),
+                          IconWithName(
+                              number: toilette,
+                              name: 'Toilettes',
+                              icon: Icons.bathtub),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

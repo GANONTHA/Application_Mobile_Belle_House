@@ -10,7 +10,7 @@ class BigText extends StatelessWidget {
     super.key,
     this.color,
     required this.text,
-    this.fontSize = 20,
+    this.fontSize = 16,
     this.overflow = TextOverflow.ellipsis,
   });
 

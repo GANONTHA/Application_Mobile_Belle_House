@@ -38,7 +38,6 @@ class _PropertyPageBuilderState extends State<PropertyPageBuilder> {
       children: [
         Container(
           height: Dimension.pageViewContainer,
-          margin: const EdgeInsets.all(10),
           child: PageView.builder(
               controller: pageController,
               itemCount: 5,
