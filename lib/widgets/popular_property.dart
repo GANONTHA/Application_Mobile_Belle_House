@@ -50,7 +50,7 @@ class PopularProperty extends StatelessWidget {
 
         //property details
         Align(
-          alignment: Alignment.bottomCenter,
+          alignment: Alignment.bottomLeft,
           child: Container(
             constraints: BoxConstraints(minHeight: Dimension.pageViewDetails),
             padding: EdgeInsets.only(
@@ -59,9 +59,10 @@ class PopularProperty extends StatelessWidget {
                 right: Dimension.paddingTen,
                 bottom: Dimension.paddingTen),
             margin: EdgeInsets.only(
-                left: Dimension.paddingTwenty,
-                right: Dimension.paddingTwenty,
-                bottom: Dimension.sizeTwo),
+              left: Dimension.sizeFourthy,
+              right: Dimension.sizeFourthy,
+              bottom: Dimension.sizeTwo,
+            ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(Dimension.paddingTwenty),
@@ -81,46 +82,44 @@ class PopularProperty extends StatelessWidget {
               ],
             ),
             height: Dimension.pageViewDetails,
-            child: Flexible(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  //price and type
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      BigText(
-                        text: type,
-                        color: Colors.black,
-                        fontSize: Dimension.sizeFourteen,
-                      ),
-                      BigText(
-                        text: '$price FCFA',
-                        color: AppColors.primaryColor,
-                        fontSize: Dimension.sizeFourteen,
-                      )
-                    ],
-                  ),
-                  SizedBox(height: Dimension.sizeFive),
-                  //area and city
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.location_on,
-                        color: AppColors.textColor,
-                        size: Dimension.sizeTwelve,
-                      ),
-                      Text(
-                        city,
-                        style: TextStyle(fontSize: Dimension.sizeTwelve),
-                      ),
-                      const Text('-'),
-                      Text(area)
-                    ],
-                  ),
-                ],
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //price and type
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    BigText(
+                      text: type,
+                      color: Colors.black,
+                      fontSize: Dimension.sizeFourteen,
+                    ),
+                    BigText(
+                      text: '$price FCFA',
+                      color: AppColors.primaryColor,
+                      fontSize: Dimension.sizeFourteen,
+                    )
+                  ],
+                ),
+                SizedBox(height: Dimension.sizeFive),
+                //area and city
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.location_on,
+                      color: AppColors.textColor,
+                      size: Dimension.sizeTwelve,
+                    ),
+                    Text(
+                      city,
+                      style: TextStyle(fontSize: Dimension.sizeTwelve),
+                    ),
+                    const Text('-'),
+                    Text(area)
+                  ],
+                ),
+              ],
             ),
           ),
         )

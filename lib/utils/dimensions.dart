@@ -20,13 +20,15 @@ class Dimension {
   static double sizeTenZero = 0;
   static double sizeFourthy = 0;
   static double sizeThirtyFive = 0;
+  static double sizeFourthyFive = 0;
+  static double sizeSeventhy = 0;
 
   static void init(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
 
     pageViewContainer = screenHeight / 3.84;
-    pageViewDetails = screenHeight / 12.04;
+    pageViewDetails = screenHeight / 11.04;
     paddingTen = screenHeight / 84.3;
     paddingTwenty = screenHeight / 42.15;
     sizeTwelve = screenHeight / 70.25;
@@ -40,5 +42,7 @@ class Dimension {
     sizeEight = screenHeight / 110.37;
     sizeFourthy = screenHeight / 21.07;
     sizeThirtyFive = screenHeight / 24.1;
+    sizeFourthyFive = screenHeight / 18.77;
+    sizeSeventhy = screenHeight / 12.04;
   }
 }

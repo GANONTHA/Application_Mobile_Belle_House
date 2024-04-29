@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class IconElement extends StatelessWidget {
@@ -9,18 +10,18 @@ class IconElement extends StatelessWidget {
     super.key,
     required this.icon,
     required this.color,
-    this.size = 30,
+    required this.size,
     this.bgColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
-      padding: const EdgeInsets.all(8),
+      height: Dimension.sizeFourthyFive,
+      padding: EdgeInsets.all(Dimension.sizeEight),
       decoration: BoxDecoration(
           color: bgColor,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(Dimension.paddingTen),
           boxShadow: const [
             BoxShadow(
               color: Colors.black12,

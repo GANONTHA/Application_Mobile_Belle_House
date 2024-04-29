@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class MenuItem extends StatelessWidget {
@@ -14,12 +15,12 @@ class MenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70,
-      height: 30,
-      margin: const EdgeInsets.all(5),
+      width: Dimension.sizeSeventhy,
+      height: Dimension.sizeThirty,
+      margin: EdgeInsets.all(Dimension.sizeFive),
       decoration: BoxDecoration(
         color: bgColor,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(Dimension.sizeFive),
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,

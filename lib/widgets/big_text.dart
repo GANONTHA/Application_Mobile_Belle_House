@@ -20,10 +20,11 @@ class BigText extends StatelessWidget {
       text,
       overflow: overflow,
       style: TextStyle(
-          color: color,
-          fontSize: fontSize,
-          fontWeight: FontWeight.w600,
-          fontFamily: 'Roboto'),
+        color: color,
+        fontSize: fontSize,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Roboto',
+      ),
     );
   }
 }

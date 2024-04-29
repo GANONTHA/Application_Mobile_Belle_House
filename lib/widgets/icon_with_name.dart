@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class IconWithName extends StatelessWidget {
@@ -19,7 +20,7 @@ class IconWithName extends StatelessWidget {
       children: [
         Icon(
           icon,
-          size: 13,
+          size: Dimension.sizeTwelve,
           color: color,
         ),
         Row(
@@ -28,7 +29,7 @@ class IconWithName extends StatelessWidget {
             Text('$number'),
             Text(
               name,
-              style: TextStyle(fontSize: 10),
+              style: TextStyle(fontSize: Dimension.paddingTen),
             )
           ],
         )

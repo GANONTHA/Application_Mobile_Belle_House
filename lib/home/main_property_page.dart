@@ -21,29 +21,37 @@ class MainPropertyPage extends StatelessWidget {
           //heading
           Container(
             margin: EdgeInsets.only(
-                top: Dimension.sizeThirty,
-                left: Dimension.paddingTen,
-                right: Dimension.paddingTen),
+              top: Dimension.sizeThirty,
+              left: Dimension.paddingTen,
+              right: Dimension.paddingTen,
+            ),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //first component
                   Row(
                     children: [
-                      const Icon(Icons.location_on,
-                          color: AppColors.iconColor1),
-                      BigText(text: 'Niamey', fontSize: Dimension.sizeSixteen),
+                      const Icon(
+                        Icons.location_on,
+                        color: AppColors.iconColor1,
+                      ),
+                      BigText(
+                        text: 'Niamey',
+                        fontSize: Dimension.sizeSixteen,
+                      ),
                       const Icon(
                         Icons.arrow_drop_down,
                         color: AppColors.iconColor1,
                       ),
                     ],
                   ),
-                  const Center(
+                  Center(
                     child: IconElement(
-                        bgColor: AppColors.secondaryColor,
-                        icon: Icons.notifications,
-                        color: AppColors.iconColor1),
+                      size: Dimension.sizeThirty,
+                      bgColor: AppColors.secondaryColor,
+                      icon: Icons.notifications,
+                      color: AppColors.iconColor1,
+                    ),
                   )
                   //second component
                 ]),
@@ -59,14 +67,18 @@ class MainPropertyPage extends StatelessWidget {
                     controller: TextEditingController(),
                     onChanged: (value) {},
                   )),
-              SizedBox(width: Dimension.paddingTen),
+              SizedBox(
+                width: Dimension.paddingTen,
+              ),
               // filter icon
-              const Expanded(
+              Expanded(
                 flex: 1,
                 child: IconElement(
-                    bgColor: AppColors.secondaryColor,
-                    icon: Icons.filter_list,
-                    color: AppColors.iconColor1),
+                  size: Dimension.sizeThirty,
+                  bgColor: AppColors.secondaryColor,
+                  icon: Icons.filter_list,
+                  color: AppColors.iconColor1,
+                ),
               ),
             ],
           ),
@@ -75,10 +87,12 @@ class MainPropertyPage extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: Dimension.paddingTen),
+                padding: EdgeInsets.only(
+                  left: Dimension.paddingTen,
+                ),
                 child: BigText(
                   text: 'CATEGORIES',
-                  fontSize: Dimension.sizeSixteen,
+                  fontSize: Dimension.sizeFourteen,
                 ),
               ),
             ],
@@ -86,7 +100,9 @@ class MainPropertyPage extends StatelessWidget {
           SizedBox(height: Dimension.sizeFive),
           //menu items
           Padding(
-            padding: EdgeInsets.only(left: Dimension.paddingTen),
+            padding: EdgeInsets.only(
+              left: Dimension.paddingTen,
+            ),
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -115,10 +131,12 @@ class MainPropertyPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: Dimension.paddingTen),
+                padding: EdgeInsets.only(
+                  left: Dimension.paddingTen,
+                ),
                 child: BigText(
                   text: 'PLUS POPULAIRES',
-                  fontSize: Dimension.sizeSixteen,
+                  fontSize: Dimension.sizeFourteen,
                 ),
               ),
               const MenuItem(
@@ -127,12 +145,12 @@ class MainPropertyPage extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: Dimension.sizeFive),
+          // SizedBox(height: Dimension.sizeFive),
           //listings
 
           const PropertyPageBuilder(),
           //near you
-          SizedBox(height: Dimension.sizeFive),
+          // SizedBox(height: Dimension.sizeFive),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -140,7 +158,7 @@ class MainPropertyPage extends StatelessWidget {
                 padding: EdgeInsets.only(left: Dimension.paddingTen),
                 child: BigText(
                   text: 'PROCHES DE VOUS',
-                  fontSize: Dimension.sizeSixteen,
+                  fontSize: Dimension.sizeFourteen,
                 ),
               ),
               const MenuItem(
@@ -152,12 +170,13 @@ class MainPropertyPage extends StatelessWidget {
           SizedBox(height: Dimension.sizeFive),
           //listings
           NearlyProperty(
-              image: Image.asset('assets/images/house-2.jpg'),
-              price: 500000,
-              area: 'Banifandou',
-              bed: 02,
-              toilette: 05,
-              type: 'Location'),
+            image: Image.asset('assets/images/house-2.jpg'),
+            price: 500000,
+            area: 'Banifandou',
+            bed: 02,
+            toilette: 05,
+            type: 'Location',
+          ),
         ],
       ),
     );
