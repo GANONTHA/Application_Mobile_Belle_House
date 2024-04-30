@@ -1,4 +1,4 @@
-import 'package:belle_house_mobile_app/home/main_property_page.dart';
+import 'package:belle_house_mobile_app/pages/home/main_property_page.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 

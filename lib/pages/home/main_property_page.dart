@@ -1,4 +1,4 @@
-import 'package:belle_house_mobile_app/home/property_page_builder.dart';
+import 'package:belle_house_mobile_app/pages/home/property_page_builder.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
