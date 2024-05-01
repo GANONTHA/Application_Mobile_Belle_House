@@ -35,7 +35,7 @@ class CTAContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(icon, color: iconColor, size: Dimension.paddingTwenty),
+          Icon(icon, color: iconColor, size: Dimension.sizeThirty),
           Text(
             text,
             style:

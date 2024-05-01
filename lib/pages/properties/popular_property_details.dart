@@ -1,14 +1,16 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
+import 'package:belle_house_mobile_app/widgets/description_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/property_details_call_to_action_container.dart';
 import 'package:belle_house_mobile_app/widgets/property_details_icon.dart';
 import 'package:flutter/material.dart';
 
 class PopularPropetyDetails extends StatelessWidget {
-  final String text;
-  const PopularPropetyDetails({super.key, required this.text});
+  const PopularPropetyDetails({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -143,6 +145,13 @@ class PopularPropetyDetails extends StatelessWidget {
                     color: Colors.black,
                     fontSize: Dimension.sizeFourteen,
                   ),
+                  const Expanded(
+                    child: SingleChildScrollView(
+                      child: DescriptionText(
+                          text:
+                              'lorem2 herlorem2 herlo fher df ndlorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdf bsdff fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdf'),
+                    ),
+                  )
                 ],
               ),
             ),

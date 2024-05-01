@@ -1,15 +1,16 @@
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
+import 'package:belle_house_mobile_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
-class __DescriptionText extends StatefulWidget {
+class DescriptionText extends StatefulWidget {
   final String text;
-  const __DescriptionText({super.key, required this.text});
+  const DescriptionText({super.key, required this.text});
 
   @override
-  State<__DescriptionText> createState() => ___DescriptionTextState();
+  State<DescriptionText> createState() => _DescriptionTextState();
 }
 
-class ___DescriptionTextState extends State<__DescriptionText> {
+class _DescriptionTextState extends State<DescriptionText> {
   late String firstHalfText;
   late String secondHalfText;
 
@@ -31,6 +32,33 @@ class ___DescriptionTextState extends State<__DescriptionText> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      child: secondHalfText.isEmpty
+          ? SmallText(text: firstHalfText)
+          : Container(
+              child: Column(children: [
+                SmallText(
+                    text: hiddenText
+                        ? firstHalfText
+                        : firstHalfText + secondHalfText),
+                InkWell(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        hiddenText ? '...more' : ' less',
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    setState(() {
+                      hiddenText = !hiddenText;
+                    });
+                  },
+                ),
+              ]),
+            ),
+    );
   }
 }
