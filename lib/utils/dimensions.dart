@@ -28,6 +28,8 @@ class Dimension {
   //popular property detail
   static double popularFoodImageHeight = 0;
   static double iconWidth80 = 0;
+  //fontSize
+  static double sizeEighteen = 0;
 
   static void init(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
@@ -54,5 +56,6 @@ class Dimension {
     sizeSeventhy = screenHeight / 12.04;
     popularFoodImageHeight = screenHeight / 2.40;
     iconWidth80 = screenHeight / 10.53;
+    sizeEighteen = screenHeight / 46.83;
   }
 }

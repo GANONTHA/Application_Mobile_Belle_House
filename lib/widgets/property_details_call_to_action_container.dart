@@ -1,31 +1,42 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
-import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class CTAContainer extends StatelessWidget {
+  final String text;
+  final IconData icon;
+  final Color bgColor;
+  final Color iconColor;
+  final Color borderColor;
+  const CTAContainer(
+      {super.key,
+      required this.text,
+      this.borderColor = AppColors.primaryColor,
+      required this.icon,
+      required this.bgColor,
+      required this.iconColor});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       // width: Dimension.iconWidth80,
-      height: Dimension.sizeFourthyFive,
+      height: Dimension.sizeFourthyFive + Dimension.paddingTen,
+      padding: EdgeInsets.symmetric(
+          horizontal: Dimension.paddingTen, vertical: Dimension.paddingTen),
       decoration: BoxDecoration(
-        color: AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(Dimension.sizeFive),
-      ),
+          color: bgColor,
+          borderRadius: BorderRadius.circular(Dimension.sizeFive),
+          border: Border.all(color: borderColor, width: 1.2)),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          IconElement(
-            icon: Icons.call,
-            color: Colors.white,
-            size: Dimension.sizeFithteen,
-            radius: Dimension.sizeFive,
-            bgColor: AppColors.primaryColor,
-            height: Dimension.sizeFourthyFive,
-          ),
-          Text("Appeler l'Agent")
+          Icon(icon, color: iconColor, size: Dimension.paddingTwenty),
+          Text(
+            text,
+            style:
+                TextStyle(color: iconColor, fontSize: Dimension.sizeEighteen),
+          )
         ],
       ),
     );

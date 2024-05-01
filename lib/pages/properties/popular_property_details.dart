@@ -2,6 +2,7 @@ import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
+import 'package:belle_house_mobile_app/widgets/property_details_call_to_action_container.dart';
 import 'package:belle_house_mobile_app/widgets/property_details_icon.dart';
 import 'package:flutter/material.dart';
 
@@ -163,30 +164,23 @@ class PopularPropetyDetails extends StatelessWidget {
         ),
         child: Row(children: [
           //call button
-          Expanded(
-            flex: 3,
-            child: Container(
-              // width: Dimension.iconWidth80,
-              height: Dimension.sizeFourthyFive,
-              decoration: BoxDecoration(
-                color: AppColors.primaryColor,
-                borderRadius: BorderRadius.circular(Dimension.sizeFive),
-              ),
-              child: Row(
-                children: [
-                  IconElement(
-                    icon: Icons.call,
-                    color: Colors.white,
-                    size: Dimension.sizeFithteen,
-                    radius: Dimension.sizeFive,
-                    bgColor: AppColors.primaryColor,
-                    height: Dimension.sizeFourthyFive,
-                  ),
-                  Text("Appeler l'Agent")
-                ],
-              ),
-            ),
-          ),
+          const Expanded(
+              flex: 3,
+              child: CTAContainer(
+                icon: Icons.call,
+                text: "Appeler l'Agent",
+                bgColor: AppColors.primaryColor,
+                iconColor: AppColors.secondaryColor,
+              )),
+          SizedBox(width: Dimension.paddingTwenty),
+          const Expanded(
+              flex: 2,
+              child: CTAContainer(
+                icon: Icons.inbox_outlined,
+                text: 'Message',
+                bgColor: AppColors.secondaryColor,
+                iconColor: AppColors.iconColor1,
+              )),
         ]),
       ),
     );
