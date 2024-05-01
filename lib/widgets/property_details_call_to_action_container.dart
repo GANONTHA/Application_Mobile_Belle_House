@@ -30,6 +30,14 @@ class CTAContainer extends StatelessWidget {
           color: borderColor,
           width: 1.2,
         ),
+        boxShadow: const [
+          BoxShadow(
+            color: Color.fromARGB(46, 21, 196, 255),
+            spreadRadius: 1,
+            blurRadius: 1,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

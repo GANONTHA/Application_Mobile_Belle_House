@@ -134,7 +134,7 @@ class PopularPropetyDetails extends StatelessWidget {
                         ),
                         PropertyDetailsIcon(
                           number: 10,
-                          item: "pizzas",
+                          item: "Cuisines",
                           icon: Icons.local_pizza,
                         ),
                       ],
@@ -158,9 +158,10 @@ class PopularPropetyDetails extends StatelessWidget {
                     Container(
                       alignment: Alignment.center,
                       padding: EdgeInsets.only(
-                          left: Dimension.sizeFourthy,
-                          right: Dimension.sizeFourthy,
-                          bottom: Dimension.paddingTwenty),
+                        left: Dimension.sizeFourthy,
+                        right: Dimension.sizeFourthy,
+                        bottom: Dimension.paddingTwenty,
+                      ),
                       child: const CTAContainer(
                         text: 'Voir Localisation',
                         icon: Icons.location_on_outlined,
@@ -170,8 +171,9 @@ class PopularPropetyDetails extends StatelessWidget {
                     ),
                     //agent
                     BigText(
-                        text: 'Details du Contacts',
-                        fontSize: Dimension.sizeEighteen),
+                      text: 'Details du Contacts',
+                      fontSize: Dimension.sizeEighteen,
+                    ),
                     Row(
                       children: [
                         Container(
