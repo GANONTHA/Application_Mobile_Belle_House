@@ -11,6 +11,7 @@ class PopularPropetyDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: Stack(
         children: [
           //image
@@ -22,7 +23,7 @@ class PopularPropetyDetails extends StatelessWidget {
               height: Dimension.popularFoodImageHeight,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/house-1.jpg'),
+                  image: AssetImage('assets/images/house-3.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -71,6 +72,7 @@ class PopularPropetyDetails extends StatelessWidget {
                 ),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //price and type
                   Row(
@@ -105,6 +107,7 @@ class PopularPropetyDetails extends StatelessWidget {
                       const Text("Banifandou")
                     ],
                   ),
+                  SizedBox(height: Dimension.sizeFive),
                   //details
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,13 +133,61 @@ class PopularPropetyDetails extends StatelessWidget {
                         icon: Icons.local_pizza,
                       ),
                     ],
-                  )
+                  ),
+                  SizedBox(height: Dimension.sizeFive),
+                  // Description
+                  BigText(
+                    text: "Description",
+                    color: Colors.black,
+                    fontSize: Dimension.sizeFourteen,
+                  ),
                 ],
               ),
             ),
           ),
-          // Description
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: Dimension.sizeFourthyFive * 2,
+        padding: EdgeInsets.only(
+            left: Dimension.paddingTwenty,
+            right: Dimension.paddingTwenty,
+            top: Dimension.paddingTwenty,
+            bottom: Dimension.paddingTwenty),
+        decoration: BoxDecoration(
+          color: AppColors.secondaryColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Dimension.paddingTwenty),
+            topRight: Radius.circular(Dimension.paddingTwenty),
+          ),
+        ),
+        child: Row(children: [
+          //call button
+          Expanded(
+            flex: 3,
+            child: Container(
+              // width: Dimension.iconWidth80,
+              height: Dimension.sizeFourthyFive,
+              decoration: BoxDecoration(
+                color: AppColors.primaryColor,
+                borderRadius: BorderRadius.circular(Dimension.sizeFive),
+              ),
+              child: Row(
+                children: [
+                  IconElement(
+                    icon: Icons.call,
+                    color: Colors.white,
+                    size: Dimension.sizeFithteen,
+                    radius: Dimension.sizeFive,
+                    bgColor: AppColors.primaryColor,
+                    height: Dimension.sizeFourthyFive,
+                  ),
+                  Text("Appeler l'Agent")
+                ],
+              ),
+            ),
+          ),
+        ]),
       ),
     );
   }
