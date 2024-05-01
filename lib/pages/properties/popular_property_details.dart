@@ -106,9 +106,8 @@ class PopularPropetyDetails extends StatelessWidget {
                     ],
                   ),
                   //details
-                  Container(
-                      // height: 100,
-                      child: const Row(
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       PropertyDetailsIcon(
                         number: 4,
@@ -131,11 +130,12 @@ class PopularPropetyDetails extends StatelessWidget {
                         icon: Icons.local_pizza,
                       ),
                     ],
-                  ))
+                  )
                 ],
               ),
             ),
-          )
+          ),
+          // Description
         ],
       ),
     );
