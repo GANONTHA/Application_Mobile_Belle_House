@@ -5,7 +5,6 @@ import 'package:belle_house_mobile_app/widgets/description_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/more_images.dart';
 import 'package:belle_house_mobile_app/widgets/property_details_call_to_action_container.dart';
-import 'package:belle_house_mobile_app/widgets/property_details_icon.dart';
 import 'package:belle_house_mobile_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 

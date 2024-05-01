@@ -1,12 +1,12 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
-import 'package:belle_house_mobile_app/widgets/furniture.dart';
+import 'package:belle_house_mobile_app/widgets/land.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:flutter/material.dart';
 
-class FurnitureList extends StatelessWidget {
-  const FurnitureList({super.key});
+class LandList extends StatelessWidget {
+  const LandList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class FurnitureList extends StatelessWidget {
                     left: Dimension.paddingTen,
                   ),
                   child: BigText(
-                    text: 'TOUS LES MEUBLES',
+                    text: 'TOUTES LES PARCELLES ',
                     fontSize: Dimension.sizeFourteen,
                   ),
                 ),
@@ -41,14 +41,13 @@ class FurnitureList extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                       padding: EdgeInsets.only(bottom: Dimension.paddingTwenty),
-                      child: Furniture(
-                        image: Image.asset('assets/images/sofa.jpeg'),
-                        name: "Sofa",
-                        seller: "seller",
-                        color: 'Rouge',
-                        price: 30000,
-                        textColor: AppColors.primaryColor,
-                      ));
+                      child: Land(
+                          image: Image.asset('assets/images/land-1.jpg'),
+                          name: 'Parcelle',
+                          seller: 'Belle House',
+                          area: 300,
+                          price: 30,
+                          textColor: AppColors.primaryColor));
                 })
           ],
         ),

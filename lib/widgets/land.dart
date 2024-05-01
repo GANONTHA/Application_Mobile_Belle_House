@@ -3,19 +3,19 @@ import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:flutter/material.dart';
 
-class Furniture extends StatelessWidget {
+class Land extends StatelessWidget {
   final Image image;
   final String name;
   final String seller;
-  final String color;
+  final double area;
   final double price;
   final Color textColor;
-  const Furniture(
+  const Land(
       {super.key,
       required this.image,
       required this.name,
       required this.seller,
-      required this.color,
+      required this.area,
       required this.price,
       required this.textColor});
 
@@ -93,10 +93,12 @@ class Furniture extends StatelessWidget {
                           ),
                         ],
                       ),
-                      BigText(text: color, fontSize: Dimension.sizeEighteen),
                       BigText(
-                        text: '$price FCFA',
-                        fontSize: Dimension.sizeEighteen,
+                          text: 'Superficie: $area m2',
+                          fontSize: Dimension.sizeTwelve),
+                      BigText(
+                        text: '$price Millions FCFA',
+                        fontSize: Dimension.sizeSixteen,
                         color: textColor,
                       )
                     ],

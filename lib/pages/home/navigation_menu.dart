@@ -1,5 +1,4 @@
-import 'package:belle_house_mobile_app/pages/properties/furnitures_list.dart';
-import 'package:belle_house_mobile_app/pages/properties/houses_list.dart';
+import 'package:belle_house_mobile_app/pages/properties/lands_list.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
@@ -144,7 +143,8 @@ class _NaviMenuState extends State<NaviMenu> {
                 SizedBox(height: Dimension.sizeFive),
                 //house list
                 // const Houses()
-                FurnitureList()
+                // FurnitureList()
+                LandList()
               ],
             ),
           ),
