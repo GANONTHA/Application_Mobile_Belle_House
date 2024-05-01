@@ -133,9 +133,9 @@ class PopularPropetyDetails extends StatelessWidget {
                           icon: Icons.shower,
                         ),
                         PropertyDetailsIcon(
-                          number: 10,
+                          number: 3,
                           item: "Cuisines",
-                          icon: Icons.local_pizza,
+                          icon: Icons.kitchen,
                         ),
                       ],
                     ),
@@ -160,7 +160,7 @@ class PopularPropetyDetails extends StatelessWidget {
                       padding: EdgeInsets.only(
                         left: Dimension.sizeFourthy,
                         right: Dimension.sizeFourthy,
-                        bottom: Dimension.paddingTwenty,
+                        bottom: Dimension.paddingTen,
                       ),
                       child: const CTAContainer(
                         text: 'Voir Localisation',
