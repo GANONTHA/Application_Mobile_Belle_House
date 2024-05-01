@@ -5,6 +5,7 @@ import 'package:belle_house_mobile_app/widgets/description_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/property_details_call_to_action_container.dart';
 import 'package:belle_house_mobile_app/widgets/property_details_icon.dart';
+import 'package:belle_house_mobile_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class PopularPropetyDetails extends StatelessWidget {
@@ -76,86 +77,132 @@ class PopularPropetyDetails extends StatelessWidget {
                 ),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  //price and type
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      BigText(
-                        text: "VENTE",
-                        color: Colors.black,
-                        fontSize: Dimension.sizeFourteen,
-                      ),
-                      BigText(
-                        text: '30 MILLIONS',
-                        color: AppColors.primaryColor,
-                        fontSize: Dimension.sizeFourteen,
-                      ),
-                    ],
-                  ),
-                  //area and city
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.location_on,
-                        color: AppColors.textColor,
-                        size: Dimension.sizeFithteen,
-                      ),
-                      Text(
-                        "Naimey",
-                        style: TextStyle(fontSize: Dimension.sizeFithteen),
-                      ),
-                      const Text('-'),
-                      const Text("Banifandou")
-                    ],
-                  ),
-                  SizedBox(height: Dimension.sizeFive),
-                  //details
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      PropertyDetailsIcon(
-                        number: 4,
-                        item: "chambre",
-                        icon: Icons.king_bed,
-                      ),
-                      PropertyDetailsIcon(
-                        number: 2,
-                        item: "Salons",
-                        icon: Icons.living,
-                      ),
-                      PropertyDetailsIcon(
-                        number: 4,
-                        item: "Toilettes",
-                        icon: Icons.shower,
-                      ),
-                      PropertyDetailsIcon(
-                        number: 10,
-                        item: "pizzas",
-                        icon: Icons.local_pizza,
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: Dimension.sizeFive),
-                  // Description
-                  BigText(
-                    text: "Description",
-                    color: Colors.black,
-                    fontSize: Dimension.sizeFourteen,
-                  ),
-                  const Expanded(
-                    child: SingleChildScrollView(
-                      child: DescriptionText(
-                          text:
-                              'lorem2 herlorem2 herlo fher df ndlorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdf bsdff fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdf'),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //price and type
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        BigText(
+                          text: "VENTE",
+                          color: Colors.black,
+                          fontSize: Dimension.sizeFourteen,
+                        ),
+                        BigText(
+                          text: '30 MILLIONS',
+                          color: AppColors.primaryColor,
+                          fontSize: Dimension.sizeFourteen,
+                        ),
+                      ],
                     ),
-                  )
-                ],
-              ),
+                    //area and city
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: AppColors.textColor,
+                          size: Dimension.sizeFithteen,
+                        ),
+                        Text(
+                          "Naimey",
+                          style: TextStyle(fontSize: Dimension.sizeFithteen),
+                        ),
+                        const Text('-'),
+                        const Text("Banifandou")
+                      ],
+                    ),
+                    SizedBox(height: Dimension.sizeFive),
+                    //details
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        PropertyDetailsIcon(
+                          number: 4,
+                          item: "chambre",
+                          icon: Icons.king_bed,
+                        ),
+                        PropertyDetailsIcon(
+                          number: 2,
+                          item: "Salons",
+                          icon: Icons.living,
+                        ),
+                        PropertyDetailsIcon(
+                          number: 4,
+                          item: "Toilettes",
+                          icon: Icons.shower,
+                        ),
+                        PropertyDetailsIcon(
+                          number: 10,
+                          item: "pizzas",
+                          icon: Icons.local_pizza,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: Dimension.sizeFive),
+                    // Description
+                    BigText(
+                      text: "Description",
+                      color: Colors.black,
+                      fontSize: Dimension.sizeFourteen,
+                    ),
+                    const Expanded(
+                      child: SingleChildScrollView(
+                        child: DescriptionText(
+                            text:
+                                'lorem2 herlorem2 herlo fher df ndlorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdf bsdff fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflorem2 herlo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdflo fher df ndf fsdfj jfsdj bfsdjf fsdfjdf bsdf'),
+                      ),
+                    ),
+                    SizedBox(height: Dimension.sizeFive),
+                    //location
+                    Container(
+                      alignment: Alignment.center,
+                      padding: EdgeInsets.only(
+                          left: Dimension.sizeFourthy,
+                          right: Dimension.sizeFourthy,
+                          bottom: Dimension.paddingTwenty),
+                      child: const CTAContainer(
+                        text: 'Voir Localisation',
+                        icon: Icons.location_on_outlined,
+                        bgColor: AppColors.secondaryColor,
+                        iconColor: AppColors.iconColor1,
+                      ),
+                    ),
+                    //agent
+                    BigText(
+                        text: 'Details du Contacts',
+                        fontSize: Dimension.sizeEighteen),
+                    Row(
+                      children: [
+                        Container(
+                          height: Dimension.sizeFourthyFive,
+                          width: Dimension.sizeFourthyFive,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                                Dimension.sizeFourthyFive),
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/house-1.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: Dimension.paddingTen),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            BigText(
+                              text: "Belle House",
+                              color: AppColors.primaryColor,
+                              fontSize: Dimension.sizeFourteen,
+                            ),
+                            const SmallText(text: 'Agence Immobiliere')
+                          ],
+                        ),
+                      ],
+                    ),
+                  ]),
             ),
-          ),
+          )
         ],
       ),
       bottomNavigationBar: Container(
