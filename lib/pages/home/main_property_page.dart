@@ -111,8 +111,12 @@ class MainPropertyPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         MenuItem(
-                          title: 'Maison',
+                          title: 'Accueil',
                           bgColor: AppColors.iconColor1,
+                        ),
+                        MenuItem(
+                          title: 'Maison',
+                          color: AppColors.iconColor1,
                         ),
                         MenuItem(
                           title: 'Parcelles',
@@ -122,10 +126,10 @@ class MainPropertyPage extends StatelessWidget {
                           title: 'Meubles',
                           color: AppColors.iconColor1,
                         ),
-                        MenuItem(
-                          title: 'Autres',
-                          color: AppColors.iconColor1,
-                        ),
+                        // MenuItem(
+                        //   title: 'Autres',
+                        //   color: AppColors.iconColor1,
+                        // ),
                       ],
                     ),
                   ),

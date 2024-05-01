@@ -25,8 +25,9 @@ class NearlyProperty extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.9,
-        height: Dimension.sizeTenZero,
+        width: MediaQuery.of(context).size.width * 0.8,
+        height: Dimension.pageViewNearest,
+        // height: Dimension.sizeTenZero,
         decoration: BoxDecoration(
             // border: Border.all(color: AppColors.primaryColor, width: 1),
             color: AppColors.secondaryColor,
@@ -55,7 +56,7 @@ class NearlyProperty extends StatelessWidget {
               Expanded(
                 flex: Dimension.sizeTwo.toInt(),
                 child: Container(
-                  height: Dimension.sizeTenZero,
+                  // height: Dimension.sizeTenZero,
                   width: MediaQuery.of(context).size.width * 0.4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -70,11 +71,12 @@ class NearlyProperty extends StatelessWidget {
 
               //property details
               Expanded(
-                flex: Dimension.sizeTwo.toInt(),
+                flex: Dimension.sizeThree.toInt(),
                 child: Padding(
                   padding: EdgeInsets.only(left: Dimension.sizeEight),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       BigText(
                         text: type,
