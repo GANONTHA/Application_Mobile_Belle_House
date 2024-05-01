@@ -96,11 +96,17 @@ class NearlyProperty extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconWithName(
-                              number: bed, name: 'Chambres', icon: Icons.bed),
+                            color: AppColors.iconColor1,
+                            number: bed,
+                            name: 'Chambres',
+                            icon: Icons.bed,
+                          ),
                           IconWithName(
-                              number: toilette,
-                              name: 'Toilettes',
-                              icon: Icons.bathtub),
+                            number: toilette,
+                            name: 'Toilettes',
+                            icon: Icons.bathtub,
+                            color: AppColors.iconColor1,
+                          ),
                         ],
                       ),
                     ],

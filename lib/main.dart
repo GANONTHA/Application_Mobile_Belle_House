@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/pages/home/main_property_page.dart';
+import 'package:belle_house_mobile_app/pages/properties/popular_property_details.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: MainPropertyPage());
+        home: PopularPropetyDetails());
   }
 }

@@ -11,7 +11,7 @@ class IconWithName extends StatelessWidget {
     required this.number,
     required this.name,
     required this.icon,
-    this.color = Colors.black,
+    required this.color,
   });
 
   @override
@@ -26,10 +26,10 @@ class IconWithName extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text('$number'),
+            Text('$number', style: TextStyle(color: color)),
             Text(
               name,
-              style: TextStyle(fontSize: Dimension.paddingTen),
+              style: TextStyle(fontSize: Dimension.paddingTen, color: color),
             )
           ],
         )
