@@ -2,6 +2,7 @@ import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
+import 'package:belle_house_mobile_app/widgets/property_details_icon.dart';
 import 'package:flutter/material.dart';
 
 class PopularPropetyDetails extends StatelessWidget {
@@ -71,6 +72,7 @@ class PopularPropetyDetails extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  //price and type
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -103,6 +105,33 @@ class PopularPropetyDetails extends StatelessWidget {
                       const Text("Banifandou")
                     ],
                   ),
+                  //details
+                  Container(
+                      // height: 100,
+                      child: const Row(
+                    children: [
+                      PropertyDetailsIcon(
+                        number: 4,
+                        item: "chambre",
+                        icon: Icons.king_bed,
+                      ),
+                      PropertyDetailsIcon(
+                        number: 2,
+                        item: "Salons",
+                        icon: Icons.living,
+                      ),
+                      PropertyDetailsIcon(
+                        number: 4,
+                        item: "Toilettes",
+                        icon: Icons.shower,
+                      ),
+                      PropertyDetailsIcon(
+                        number: 10,
+                        item: "pizzas",
+                        icon: Icons.local_pizza,
+                      ),
+                    ],
+                  ))
                 ],
               ),
             ),
