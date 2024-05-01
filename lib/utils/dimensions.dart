@@ -25,6 +25,9 @@ class Dimension {
   static double sizeSeventhy = 0;
   static double pageViewNearest = 0;
 
+  //popular food
+  static double popularFoodImageHeight = 0;
+
   static void init(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
@@ -48,5 +51,6 @@ class Dimension {
     sizeThirtyFive = screenHeight / 24.1;
     sizeFourthyFive = screenHeight / 18.77;
     sizeSeventhy = screenHeight / 12.04;
+    popularFoodImageHeight = screenHeight / 2.40;
   }
 }

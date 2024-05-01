@@ -46,10 +46,12 @@ class MainPropertyPage extends StatelessWidget {
                   ),
                   Center(
                     child: IconElement(
+                      radius: Dimension.paddingTen,
                       size: Dimension.sizeThirty,
                       bgColor: AppColors.secondaryColor,
                       icon: Icons.notifications,
                       color: AppColors.iconColor1,
+                      height: Dimension.sizeFourthyFive,
                     ),
                   )
                   //second component
@@ -78,10 +80,12 @@ class MainPropertyPage extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: IconElement(
+                          radius: Dimension.paddingTen,
                           size: Dimension.sizeThirty,
                           bgColor: AppColors.secondaryColor,
                           icon: Icons.filter_list,
                           color: AppColors.iconColor1,
+                          height: Dimension.sizeFourthyFive,
                         ),
                       ),
                     ],

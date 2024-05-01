@@ -6,22 +6,26 @@ class IconElement extends StatelessWidget {
   final Color color;
   final double size;
   final Color? bgColor;
+  final double radius;
+  final double height;
   const IconElement({
     super.key,
     required this.icon,
     required this.color,
     required this.size,
     this.bgColor,
+    required this.radius,
+    required this.height,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Dimension.sizeFourthyFive,
+      height: height,
       padding: EdgeInsets.all(Dimension.sizeEight),
       decoration: BoxDecoration(
           color: bgColor,
-          borderRadius: BorderRadius.circular(Dimension.paddingTen),
+          borderRadius: BorderRadius.circular(radius),
           boxShadow: const [
             BoxShadow(
               color: Colors.black12,
