@@ -1,12 +1,13 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
+import 'package:belle_house_mobile_app/widgets/furniture.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:belle_house_mobile_app/widgets/nearly_property.dart';
 import 'package:flutter/material.dart';
 
-class Houses extends StatelessWidget {
-  const Houses({super.key});
+class FurnitureList extends StatelessWidget {
+  const FurnitureList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class Houses extends StatelessWidget {
                     left: Dimension.paddingTen,
                   ),
                   child: BigText(
-                    text: 'TOUTES LES MAISONS',
+                    text: 'TOUS LES MEUBLES',
                     fontSize: Dimension.sizeFourteen,
                   ),
                 ),
@@ -40,16 +41,15 @@ class Houses extends StatelessWidget {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: EdgeInsets.only(bottom: Dimension.paddingTwenty),
-                    child: NearlyProperty(
-                      image: Image.asset('assets/images/house-2.jpg'),
-                      price: 500000,
-                      area: 'Banifandou',
-                      bed: 02,
-                      toilette: 05,
-                      type: 'Location',
-                    ),
-                  );
+                      padding: EdgeInsets.only(bottom: Dimension.paddingTwenty),
+                      child: Furniture(
+                        image: Image.asset('assets/images/sofa.jpeg'),
+                        name: "Sofa",
+                        seller: "seller",
+                        color: 'Rouge',
+                        price: 30000,
+                        textColor: AppColors.primaryColor,
+                      ));
                 })
           ],
         ),
