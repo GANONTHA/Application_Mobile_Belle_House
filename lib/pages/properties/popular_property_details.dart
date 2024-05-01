@@ -7,7 +7,8 @@ import 'package:belle_house_mobile_app/widgets/property_details_icon.dart';
 import 'package:flutter/material.dart';
 
 class PopularPropetyDetails extends StatelessWidget {
-  const PopularPropetyDetails({super.key});
+  final String text;
+  const PopularPropetyDetails({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -162,26 +163,28 @@ class PopularPropetyDetails extends StatelessWidget {
             topRight: Radius.circular(Dimension.paddingTwenty),
           ),
         ),
-        child: Row(children: [
-          //call button
-          const Expanded(
-              flex: 3,
-              child: CTAContainer(
-                icon: Icons.call,
-                text: "Appeler l'Agent",
-                bgColor: AppColors.primaryColor,
-                iconColor: AppColors.secondaryColor,
-              )),
-          SizedBox(width: Dimension.paddingTwenty),
-          const Expanded(
-              flex: 2,
-              child: CTAContainer(
-                icon: Icons.inbox_outlined,
-                text: 'Message',
-                bgColor: AppColors.secondaryColor,
-                iconColor: AppColors.iconColor1,
-              )),
-        ]),
+        child: Row(
+          children: [
+            //call button
+            const Expanded(
+                flex: 3,
+                child: CTAContainer(
+                  icon: Icons.call,
+                  text: "Appeler l'Agent",
+                  bgColor: AppColors.primaryColor,
+                  iconColor: AppColors.secondaryColor,
+                )),
+            SizedBox(width: Dimension.paddingTwenty),
+            const Expanded(
+                flex: 2,
+                child: CTAContainer(
+                  icon: Icons.inbox_outlined,
+                  text: 'Message',
+                  bgColor: AppColors.secondaryColor,
+                  iconColor: AppColors.iconColor1,
+                )),
+          ],
+        ),
       ),
     );
   }

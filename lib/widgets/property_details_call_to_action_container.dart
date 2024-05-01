@@ -24,9 +24,13 @@ class CTAContainer extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           horizontal: Dimension.paddingTen, vertical: Dimension.paddingTen),
       decoration: BoxDecoration(
-          color: bgColor,
-          borderRadius: BorderRadius.circular(Dimension.sizeFive),
-          border: Border.all(color: borderColor, width: 1.2)),
+        color: bgColor,
+        borderRadius: BorderRadius.circular(Dimension.sizeFive),
+        border: Border.all(
+          color: borderColor,
+          width: 1.2,
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
