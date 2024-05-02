@@ -6,8 +6,12 @@ import 'package:belle_house_mobile_app/pages/properties/houses_list.dart';
 import 'package:belle_house_mobile_app/pages/properties/land_details.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
+import 'helpers/dependencies.dart' as dep;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  //load dependencies
+  await dep.init();
   runApp(const MyApp());
 }
 
