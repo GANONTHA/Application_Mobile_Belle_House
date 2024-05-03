@@ -1,12 +1,19 @@
+import 'package:belle_house_mobile_app/pages/home/navigation_menu.dart';
 import 'package:belle_house_mobile_app/pages/home/property_page_builder.dart';
+import 'package:belle_house_mobile_app/pages/properties/furnitures_list.dart';
+import 'package:belle_house_mobile_app/pages/properties/house_details.dart';
+import 'package:belle_house_mobile_app/pages/properties/houses_list.dart';
+import 'package:belle_house_mobile_app/pages/properties/land_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
+import 'package:belle_house_mobile_app/widgets/furniture.dart';
 import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:belle_house_mobile_app/widgets/nearly_property.dart';
 import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MainPropertyPage extends StatelessWidget {
   const MainPropertyPage({super.key});
@@ -111,24 +118,39 @@ class MainPropertyPage extends StatelessWidget {
                     padding: EdgeInsets.only(
                       left: Dimension.paddingTen,
                     ),
-                    child: const Row(
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        MenuItem(
+                        const MenuItem(
                           title: 'Accueil',
                           bgColor: AppColors.iconColor1,
                         ),
-                        MenuItem(
-                          title: 'Maison',
-                          color: AppColors.iconColor1,
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const NaviMenu());
+                          },
+                          child: const MenuItem(
+                            title: 'Maison',
+                            color: AppColors.iconColor1,
+                          ),
                         ),
-                        MenuItem(
-                          title: 'Parcelles',
-                          color: AppColors.iconColor1,
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const NaviMenu());
+                          },
+                          child: const MenuItem(
+                            title: 'Parcelles',
+                            color: AppColors.iconColor1,
+                          ),
                         ),
-                        MenuItem(
-                          title: 'Meubles',
-                          color: AppColors.iconColor1,
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const NaviMenu());
+                          },
+                          child: const MenuItem(
+                            title: 'Meubles',
+                            color: AppColors.iconColor1,
+                          ),
                         ),
                         // MenuItem(
                         //   title: 'Autres',
@@ -160,7 +182,11 @@ class MainPropertyPage extends StatelessWidget {
                   // SizedBox(height: Dimension.sizeFive),
                   //listings
 
-                  const PropertyPageBuilder(),
+                  GestureDetector(
+                      onTap: () {
+                        Get.to(() => const PopularPropetyDetails());
+                      },
+                      child: const PropertyPageBuilder()),
                   //near you
                   // SizedBox(height: Dimension.sizeFive),
                   Row(
@@ -189,13 +215,18 @@ class MainPropertyPage extends StatelessWidget {
                         return Padding(
                           padding:
                               EdgeInsets.only(bottom: Dimension.paddingTen),
-                          child: NearlyProperty(
-                            image: Image.asset('assets/images/house-2.jpg'),
-                            price: 500000,
-                            area: 'Banifandou',
-                            bed: 02,
-                            toilette: 05,
-                            type: 'Location',
+                          child: GestureDetector(
+                            onTap: () {
+                              Get.to(() => const PopularPropetyDetails());
+                            },
+                            child: NearlyProperty(
+                              image: Image.asset('assets/images/house-2.jpg'),
+                              price: 500000,
+                              area: 'Banifandou',
+                              bed: 02,
+                              toilette: 05,
+                              type: 'Location',
+                            ),
                           ),
                         );
                       }),

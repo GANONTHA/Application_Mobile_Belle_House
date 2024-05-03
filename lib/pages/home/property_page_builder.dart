@@ -1,8 +1,10 @@
+import 'package:belle_house_mobile_app/pages/properties/house_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/popular_property.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PropertyPageBuilder extends StatefulWidget {
   const PropertyPageBuilder({super.key});
