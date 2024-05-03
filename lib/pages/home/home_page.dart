@@ -36,12 +36,28 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: pages[currentIndex],
-        bottomNavigationBar: BottomNavigationBar(
+      backgroundColor: AppColors.backgroundColor,
+      body: pages[currentIndex],
+      bottomNavigationBar: Container(
+        height: 65,
+        decoration: const BoxDecoration(
+          color: AppColors.primaryColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(14),
+            topRight: Radius.circular(14),
+          ),
+        ),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(14),
+            topRight: Radius.circular(14),
+          ),
+          child: BottomNavigationBar(
             backgroundColor: AppColors.primaryColor,
             selectedItemColor: AppColors.secondaryColor,
             onTap: onTapNav,
             currentIndex: currentIndex,
+            type: BottomNavigationBarType.fixed,
             unselectedItemColor: const Color.fromARGB(190, 233, 231, 231),
             items: const [
               BottomNavigationBarItem(
@@ -56,6 +72,10 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.person),
                 label: 'Profile',
               ),
-            ]));
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
