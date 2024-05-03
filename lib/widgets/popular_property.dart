@@ -1,9 +1,7 @@
-import 'package:belle_house_mobile_app/pages/properties/house_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class PopularProperty extends StatelessWidget {
   final Image image;

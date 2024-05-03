@@ -78,7 +78,7 @@ class Furniture extends StatelessWidget {
                     children: [
                       BigText(
                         text: name,
-                        fontSize: Dimension.sizeSixteen,
+                        fontSize: Dimension.sizeFourteen,
                       ),
                       //location
                       Row(
@@ -89,14 +89,14 @@ class Furniture extends StatelessWidget {
                           ),
                           BigText(
                             text: seller,
-                            fontSize: Dimension.sizeSixteen,
+                            fontSize: Dimension.sizeFourteen,
                           ),
                         ],
                       ),
                       BigText(text: color, fontSize: Dimension.sizeEighteen),
                       BigText(
                         text: '$price FCFA',
-                        fontSize: Dimension.sizeEighteen,
+                        fontSize: Dimension.sizeSixteen,
                         color: textColor,
                       )
                     ],

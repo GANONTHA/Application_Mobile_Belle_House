@@ -1,5 +1,7 @@
 import 'package:belle_house_mobile_app/pages/home/navigation_menu.dart';
+import 'package:belle_house_mobile_app/pages/others/profile.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
+import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,17 +16,12 @@ class _HomePageState extends State<HomePage> {
   List pages = [
     const NaviMenu(),
     Container(
-      color: Colors.blue,
-      child: const Center(
-        child: Text('page 1'),
-      ),
-    ),
-    Container(
       color: Colors.cyan,
       child: const Center(
         child: Text('page 2'),
       ),
     ),
+    const Profile(),
   ];
   //changing the screen on tapping
   void onTapNav(int index) {
@@ -59,23 +56,37 @@ class _HomePageState extends State<HomePage> {
             currentIndex: currentIndex,
             type: BottomNavigationBarType.fixed,
             unselectedItemColor: const Color.fromARGB(190, 233, 231, 231),
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: _buildNavItem(Icons.home, 0),
                 label: 'Accueil',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.favorite),
+                icon: _buildNavItem(Icons.favorite, 1),
                 label: 'Important',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: _buildNavItem(Icons.person, 2),
                 label: 'Profile',
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildNavItem(IconData icon, int index) {
+    return Container(
+      height: Dimension.sizeThirty,
+      width: Dimension.sizeThirty * 2,
+      decoration: BoxDecoration(
+        color: currentIndex == index
+            ? AppColors.secondaryColor.withOpacity(.35)
+            : null, // Change the color based on the selected index
+        borderRadius: BorderRadius.circular(13),
+      ),
+      child: Icon(icon),
     );
   }
 }

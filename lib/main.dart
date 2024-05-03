@@ -1,10 +1,4 @@
 import 'package:belle_house_mobile_app/pages/home/home_page.dart';
-import 'package:belle_house_mobile_app/pages/home/main_property_page.dart';
-import 'package:belle_house_mobile_app/pages/home/navigation_menu.dart';
-import 'package:belle_house_mobile_app/pages/properties/furniture_details.dart';
-import 'package:belle_house_mobile_app/pages/properties/house_details.dart';
-import 'package:belle_house_mobile_app/pages/properties/houses_list.dart';
-import 'package:belle_house_mobile_app/pages/properties/land_details.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
