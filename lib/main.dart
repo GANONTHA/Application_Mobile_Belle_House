@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/pages/home/home_page.dart';
 import 'package:belle_house_mobile_app/pages/home/main_property_page.dart';
 import 'package:belle_house_mobile_app/pages/home/navigation_menu.dart';
 import 'package:belle_house_mobile_app/pages/properties/furniture_details.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainPropertyPage(),
+      home: const HomePage(),
     );
   }
 }
