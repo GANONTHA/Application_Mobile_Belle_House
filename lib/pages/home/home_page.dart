@@ -1,5 +1,6 @@
 import 'package:belle_house_mobile_app/pages/home/navigation_menu.dart';
 import 'package:belle_house_mobile_app/pages/others/profile.dart';
+import 'package:belle_house_mobile_app/pages/others/wish_list.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +16,7 @@ class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   List pages = [
     const NaviMenu(),
-    Container(
-      color: Colors.cyan,
-      child: const Center(
-        child: Text('page 2'),
-      ),
-    ),
+    const Important(),
     const Profile(),
   ];
   //changing the screen on tapping

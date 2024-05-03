@@ -13,7 +13,7 @@ class IconElement extends StatelessWidget {
     required this.icon,
     required this.color,
     required this.size,
-    this.bgColor,
+    this.bgColor = Colors.transparent,
     required this.radius,
     required this.height,
   });
