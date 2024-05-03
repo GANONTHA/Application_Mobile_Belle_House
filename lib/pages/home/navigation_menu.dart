@@ -1,4 +1,5 @@
 import 'package:belle_house_mobile_app/pages/home/main_property_page.dart';
+import 'package:belle_house_mobile_app/pages/properties/furnitures_list.dart';
 import 'package:belle_house_mobile_app/pages/properties/houses_list.dart';
 import 'package:belle_house_mobile_app/pages/properties/lands_list.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
@@ -8,7 +9,6 @@ import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:belle_house_mobile_app/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class NaviMenu extends StatefulWidget {
   const NaviMenu({super.key});
@@ -18,6 +18,19 @@ class NaviMenu extends StatefulWidget {
 }
 
 class _NaviMenuState extends State<NaviMenu> {
+  int currentpage = 0;
+  final List _pages = [
+    const MainPropertyPage(),
+    const Houses(),
+    const LandList(),
+    const FurnitureList(),
+  ];
+  void onTapNav(int index) {
+    setState(() {
+      currentpage = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,24 +135,43 @@ class _NaviMenuState extends State<NaviMenu> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Get.to(() => MainPropertyPage());
+                          currentpage = 0;
+                          onTapNav(currentpage);
                         },
-                        child: MenuItem(
+                        child: const MenuItem(
                           title: 'Accueil',
                           color: AppColors.iconColor1,
                         ),
                       ),
-                      MenuItem(
-                        title: 'Maison',
-                        bgColor: AppColors.iconColor1,
+                      GestureDetector(
+                        onTap: () {
+                          currentpage = 1;
+                          onTapNav(currentpage);
+                        },
+                        child: const MenuItem(
+                          title: 'Maison',
+                          bgColor: AppColors.iconColor1,
+                        ),
                       ),
-                      MenuItem(
-                        title: 'Parcelles',
-                        color: AppColors.iconColor1,
+                      GestureDetector(
+                        onTap: () {
+                          currentpage = 2;
+                          onTapNav(currentpage);
+                        },
+                        child: const MenuItem(
+                          title: 'Parcelles',
+                          color: AppColors.iconColor1,
+                        ),
                       ),
-                      MenuItem(
-                        title: 'Meubles',
-                        color: AppColors.iconColor1,
+                      GestureDetector(
+                        onTap: () {
+                          currentpage = 3;
+                          onTapNav(currentpage);
+                        },
+                        child: const MenuItem(
+                          title: 'Meubles',
+                          color: AppColors.iconColor1,
+                        ),
                       ),
                       // MenuItem(
                       //   title: 'Autres',
@@ -152,7 +184,7 @@ class _NaviMenuState extends State<NaviMenu> {
                 //house list
                 // const Houses()
                 // FurnitureList()
-                Houses()
+                _pages[currentpage],
               ],
             ),
           ),

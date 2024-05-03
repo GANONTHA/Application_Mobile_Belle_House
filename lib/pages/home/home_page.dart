@@ -1,7 +1,6 @@
-import 'package:belle_house_mobile_app/pages/home/main_property_page.dart';
+import 'package:belle_house_mobile_app/pages/home/navigation_menu.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,16 +12,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   List pages = [
-    MainPropertyPage(),
+    const NaviMenu(),
     Container(
       color: Colors.blue,
-      child: Center(
+      child: const Center(
         child: Text('page 1'),
       ),
     ),
     Container(
       color: Colors.cyan,
-      child: Center(
+      child: const Center(
         child: Text('page 2'),
       ),
     ),
@@ -43,7 +42,7 @@ class _HomePageState extends State<HomePage> {
             selectedItemColor: AppColors.secondaryColor,
             onTap: onTapNav,
             currentIndex: currentIndex,
-            unselectedItemColor: Color.fromARGB(190, 233, 231, 231),
+            unselectedItemColor: const Color.fromARGB(190, 233, 231, 231),
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
