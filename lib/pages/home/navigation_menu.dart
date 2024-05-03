@@ -40,7 +40,7 @@ class _NaviMenuState extends State<NaviMenu> {
           //heading
           Container(
             margin: EdgeInsets.only(
-              top: Dimension.sizeThirty,
+              top: Dimension.sizeThirty * 1.6,
               left: Dimension.paddingTen,
               right: Dimension.paddingTen,
             ),

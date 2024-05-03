@@ -40,7 +40,7 @@ class _LandDetailStateState extends State<LandDetailState> {
           Positioned(
             left: Dimension.paddingTwenty,
             right: Dimension.paddingTwenty,
-            top: Dimension.sizeThirtyFive,
+            top: Dimension.sizeThirtyFive * 1.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

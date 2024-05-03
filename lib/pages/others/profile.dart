@@ -11,7 +11,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Padding(
-        padding: EdgeInsets.only(top: Dimension.sizeThirty),
+        padding: EdgeInsets.only(top: Dimension.sizeThirty * 1.75),
         child: Column(
           children: [
             Container(

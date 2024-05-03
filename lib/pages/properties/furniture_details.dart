@@ -41,7 +41,7 @@ class _MeubleDetailsState extends State<MeubleDetails> {
           Positioned(
             left: Dimension.paddingTwenty,
             right: Dimension.paddingTwenty,
-            top: Dimension.sizeThirtyFive,
+            top: Dimension.sizeThirtyFive * 1.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

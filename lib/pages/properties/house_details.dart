@@ -38,7 +38,7 @@ class PopularPropetyDetails extends StatelessWidget {
           Positioned(
             left: Dimension.paddingTwenty,
             right: Dimension.paddingTwenty,
-            top: Dimension.sizeThirtyFive,
+            top: Dimension.sizeThirtyFive * 1.3,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
