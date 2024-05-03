@@ -1,9 +1,11 @@
+import 'package:belle_house_mobile_app/pages/properties/furniture_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/furniture.dart';
 import 'package:belle_house_mobile_app/widgets/menu_item.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FurnitureList extends StatelessWidget {
   const FurnitureList({super.key});
@@ -39,16 +41,22 @@ class FurnitureList extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return Padding(
-                      padding: EdgeInsets.only(bottom: Dimension.paddingTwenty),
-                      child: Furniture(
-                        image: Image.asset('assets/images/sofa.jpeg'),
-                        name: "Sofa",
-                        seller: "seller",
-                        color: 'Rouge',
-                        price: 30000,
-                        textColor: AppColors.primaryColor,
-                      ));
+                  return GestureDetector(
+                    onTap: () {
+                      Get.to(() => const MeubleDetails());
+                    },
+                    child: Padding(
+                        padding:
+                            EdgeInsets.only(bottom: Dimension.paddingTwenty),
+                        child: Furniture(
+                          image: Image.asset('assets/images/sofa.jpeg'),
+                          name: "Sofa",
+                          seller: "seller",
+                          color: 'Rouge',
+                          price: 30000,
+                          textColor: AppColors.primaryColor,
+                        )),
+                  );
                 })
           ],
         ),

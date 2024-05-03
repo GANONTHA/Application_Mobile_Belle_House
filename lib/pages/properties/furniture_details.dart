@@ -45,13 +45,18 @@ class _MeubleDetailsState extends State<MeubleDetails> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                IconElement(
-                  icon: Icons.arrow_back,
-                  color: AppColors.iconColor1,
-                  size: Dimension.paddingTwenty,
-                  radius: Dimension.paddingTwenty,
-                  bgColor: AppColors.secondaryColor,
-                  height: Dimension.sizeThirtyFive,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: IconElement(
+                    icon: Icons.arrow_back,
+                    color: AppColors.iconColor1,
+                    size: Dimension.paddingTwenty,
+                    radius: Dimension.paddingTwenty,
+                    bgColor: AppColors.secondaryColor,
+                    height: Dimension.sizeThirtyFive,
+                  ),
                 ),
                 IconElement(
                   icon: Icons.favorite,
