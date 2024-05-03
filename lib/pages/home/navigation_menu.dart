@@ -138,9 +138,14 @@ class _NaviMenuState extends State<NaviMenu> {
                           currentpage = 0;
                           onTapNav(currentpage);
                         },
-                        child: const MenuItem(
+                        child: MenuItem(
                           title: 'Accueil',
-                          color: AppColors.iconColor1,
+                          color: currentpage == 0
+                              ? AppColors.secondaryColor
+                              : AppColors.primaryColor,
+                          bgColor: currentpage == 0
+                              ? AppColors.primaryColor
+                              : AppColors.secondaryColor,
                         ),
                       ),
                       GestureDetector(
@@ -148,9 +153,14 @@ class _NaviMenuState extends State<NaviMenu> {
                           currentpage = 1;
                           onTapNav(currentpage);
                         },
-                        child: const MenuItem(
+                        child: MenuItem(
                           title: 'Maison',
-                          bgColor: AppColors.iconColor1,
+                          color: currentpage == 1
+                              ? AppColors.secondaryColor
+                              : AppColors.primaryColor,
+                          bgColor: currentpage == 1
+                              ? AppColors.primaryColor
+                              : AppColors.secondaryColor,
                         ),
                       ),
                       GestureDetector(
@@ -158,9 +168,14 @@ class _NaviMenuState extends State<NaviMenu> {
                           currentpage = 2;
                           onTapNav(currentpage);
                         },
-                        child: const MenuItem(
+                        child: MenuItem(
                           title: 'Parcelles',
-                          color: AppColors.iconColor1,
+                          color: currentpage == 2
+                              ? AppColors.secondaryColor
+                              : AppColors.primaryColor,
+                          bgColor: currentpage == 2
+                              ? AppColors.primaryColor
+                              : AppColors.secondaryColor,
                         ),
                       ),
                       GestureDetector(
@@ -168,9 +183,14 @@ class _NaviMenuState extends State<NaviMenu> {
                           currentpage = 3;
                           onTapNav(currentpage);
                         },
-                        child: const MenuItem(
+                        child: MenuItem(
                           title: 'Meubles',
-                          color: AppColors.iconColor1,
+                          color: currentpage == 3
+                              ? AppColors.secondaryColor
+                              : AppColors.primaryColor,
+                          bgColor: currentpage == 3
+                              ? AppColors.primaryColor
+                              : AppColors.secondaryColor,
                         ),
                       ),
                       // MenuItem(
