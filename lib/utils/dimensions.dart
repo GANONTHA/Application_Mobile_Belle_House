@@ -12,6 +12,7 @@ class Dimension {
   static double sizeFourteen = 0;
   static double sizeTwelve = 0;
   static double sizeThirty = 0;
+  static double sizeThirtheen = 0;
   static double sizeFithteen = 0;
   static double sizeSixteen = 0;
   static double sizeFive = 0;
@@ -47,6 +48,7 @@ class Dimension {
     sizeThree = screenHeight / 281.5;
     sizeFive = screenHeight / 128.2;
     sizeThirty = screenHeight / 28.1;
+    sizeThirtheen = screenHeight / 64.84;
     sizeSixteen = screenHeight / 52.68;
     sizeTenZero = screenHeight / 7.66;
     sizeEight = screenHeight / 110.37;

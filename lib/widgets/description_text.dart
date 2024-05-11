@@ -35,10 +35,11 @@ class _DescriptionTextState extends State<DescriptionText> {
   Widget build(BuildContext context) {
     return Container(
       child: secondHalfText.isEmpty
-          ? SmallText(text: firstHalfText)
+          ? SmallText(text: firstHalfText, size: Dimension.sizeEight * 2)
           : Container(
               child: Column(children: [
                 SmallText(
+                    size: Dimension.sizeEight * 2,
                     text: hiddenText
                         ? firstHalfText
                         : firstHalfText + secondHalfText),

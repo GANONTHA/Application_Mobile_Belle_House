@@ -189,7 +189,10 @@ class _MeubleDetailsState extends State<MeubleDetails> {
                               color: AppColors.primaryColor,
                               fontSize: Dimension.sizeFourteen,
                             ),
-                            const SmallText(text: 'Vente de Fournitures')
+                            SmallText(
+                              text: 'Vente de Fournitures',
+                              size: Dimension.sizeEight * 2,
+                            )
                           ],
                         ),
                       ],

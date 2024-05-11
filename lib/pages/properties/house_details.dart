@@ -202,7 +202,10 @@ class PopularPropetyDetails extends StatelessWidget {
                               color: AppColors.primaryColor,
                               fontSize: Dimension.sizeFourteen,
                             ),
-                            const SmallText(text: 'Agence Immobiliere')
+                            SmallText(
+                              text: 'Agence Immobiliere',
+                              size: Dimension.sizeEight * 2,
+                            )
                           ],
                         ),
                       ],

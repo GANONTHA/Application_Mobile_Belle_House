@@ -1,5 +1,8 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
+import 'package:belle_house_mobile_app/widgets/big_text.dart';
+import 'package:belle_house_mobile_app/widgets/icon_component.dart';
+import 'package:belle_house_mobile_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -13,7 +16,7 @@ class ImportantItem extends StatelessWidget {
           top: Dimension.paddingTen,
           left: Dimension.paddingTen,
           right: Dimension.paddingTen),
-      height: Dimension.pageViewDetails * 2.8,
+      height: Dimension.pageViewDetails * 3,
       decoration: BoxDecoration(
         color: AppColors.secondaryColor,
         borderRadius: BorderRadius.only(
@@ -24,7 +27,7 @@ class ImportantItem extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            flex: 4,
+            flex: 2,
             child: Container(
               // color: AppColors.iconColor1,
 
@@ -33,7 +36,7 @@ class ImportantItem extends StatelessWidget {
                   topLeft: Radius.circular(Dimension.paddingTen),
                   topRight: Radius.circular(Dimension.paddingTen),
                 ),
-                image: DecorationImage(
+                image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage('assets/images/house-1.jpg'),
                 ),
@@ -44,11 +47,67 @@ class ImportantItem extends StatelessWidget {
             flex: 1,
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: Dimension.paddingTen),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
                 children: [
-                  Text('data'),
-                  Text('data'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.location_on,
+                            size: Dimension.paddingTwenty,
+                          ),
+                          BigText(
+                              text: 'Francophonie',
+                              fontSize: Dimension.sizeThirtheen)
+                        ],
+                      ),
+                      BigText(
+                        text: 'Location',
+                        fontSize: Dimension.sizeThirtheen,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            height: Dimension.sizeFourthy,
+                            width: Dimension.sizeFourthy,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(Dimension.sizeFourthy),
+                              image: const DecorationImage(
+                                image: AssetImage('assets/images/house-1.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: Dimension.paddingTen),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              BigText(
+                                text: "Belle House",
+                                color: AppColors.primaryColor,
+                                fontSize: Dimension.sizeThirtheen,
+                              ),
+                              SmallText(
+                                text: 'Agence Immobiliere',
+                                size: Dimension.sizeThirtheen,
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      BigText(
+                        text: '200 000 FCFA/Mois',
+                        fontSize: Dimension.sizeThirtheen,
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
