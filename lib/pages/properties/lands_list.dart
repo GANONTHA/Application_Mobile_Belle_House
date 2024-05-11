@@ -1,4 +1,4 @@
-import 'package:belle_house_mobile_app/pages/home/near_you_page.dart';
+import 'package:belle_house_mobile_app/pages/properties/all_lands.dart';
 import 'package:belle_house_mobile_app/pages/properties/land_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
@@ -30,7 +30,7 @@ class LandList extends StatelessWidget {
                   ),
                 ),
                 MenuItem(
-                  action: () => {Get.to(() => const NearestPropertiesPage())},
+                  action: () => {Get.to(() => const AllLands())},
                   title: 'Voir+',
                   color: AppColors.iconColor1,
                 ),
