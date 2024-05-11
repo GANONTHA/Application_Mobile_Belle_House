@@ -37,7 +37,7 @@ class Houses extends StatelessWidget {
             SizedBox(height: Dimension.sizeFive),
             GestureDetector(
               onTap: () {
-                Get.to(() => PopularPropetyDetails());
+                Get.to(() => const PopularPropetyDetails());
               },
               child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
