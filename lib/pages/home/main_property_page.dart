@@ -34,7 +34,8 @@ class MainPropertyPage extends StatelessWidget {
                           fontSize: Dimension.sizeFourteen,
                         ),
                       ),
-                      const MenuItem(
+                      MenuItem(
+                        action: () => {},
                         title: 'Voir+',
                         color: AppColors.iconColor1,
                       ),
@@ -60,7 +61,8 @@ class MainPropertyPage extends StatelessWidget {
                           fontSize: Dimension.sizeFourteen,
                         ),
                       ),
-                      const MenuItem(
+                      MenuItem(
+                        action: () => {},
                         title: 'Voir+',
                         color: AppColors.iconColor1,
                       ),

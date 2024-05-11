@@ -133,65 +133,57 @@ class _NaviMenuState extends State<NaviMenu> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GestureDetector(
-                        onTap: () {
+                      MenuItem(
+                        action: () {
                           currentpage = 0;
                           onTapNav(currentpage);
                         },
-                        child: MenuItem(
-                          title: 'Accueil',
-                          color: currentpage == 0
-                              ? AppColors.secondaryColor
-                              : AppColors.primaryColor,
-                          bgColor: currentpage == 0
-                              ? AppColors.primaryColor
-                              : AppColors.secondaryColor,
-                        ),
+                        title: 'Accueil',
+                        color: currentpage == 0
+                            ? AppColors.secondaryColor
+                            : AppColors.primaryColor,
+                        bgColor: currentpage == 0
+                            ? AppColors.primaryColor
+                            : AppColors.secondaryColor,
                       ),
-                      GestureDetector(
-                        onTap: () {
+                      MenuItem(
+                        action: () {
                           currentpage = 1;
                           onTapNav(currentpage);
                         },
-                        child: MenuItem(
-                          title: 'Maison',
-                          color: currentpage == 1
-                              ? AppColors.secondaryColor
-                              : AppColors.primaryColor,
-                          bgColor: currentpage == 1
-                              ? AppColors.primaryColor
-                              : AppColors.secondaryColor,
-                        ),
+                        title: 'Maison',
+                        color: currentpage == 1
+                            ? AppColors.secondaryColor
+                            : AppColors.primaryColor,
+                        bgColor: currentpage == 1
+                            ? AppColors.primaryColor
+                            : AppColors.secondaryColor,
                       ),
-                      GestureDetector(
-                        onTap: () {
+                      MenuItem(
+                        action: () {
                           currentpage = 2;
                           onTapNav(currentpage);
                         },
-                        child: MenuItem(
-                          title: 'Parcelles',
-                          color: currentpage == 2
-                              ? AppColors.secondaryColor
-                              : AppColors.primaryColor,
-                          bgColor: currentpage == 2
-                              ? AppColors.primaryColor
-                              : AppColors.secondaryColor,
-                        ),
+                        title: 'Parcelles',
+                        color: currentpage == 2
+                            ? AppColors.secondaryColor
+                            : AppColors.primaryColor,
+                        bgColor: currentpage == 2
+                            ? AppColors.primaryColor
+                            : AppColors.secondaryColor,
                       ),
-                      GestureDetector(
-                        onTap: () {
+                      MenuItem(
+                        action: () {
                           currentpage = 3;
                           onTapNav(currentpage);
                         },
-                        child: MenuItem(
-                          title: 'Meubles',
-                          color: currentpage == 3
-                              ? AppColors.secondaryColor
-                              : AppColors.primaryColor,
-                          bgColor: currentpage == 3
-                              ? AppColors.primaryColor
-                              : AppColors.secondaryColor,
-                        ),
+                        title: 'Meubles',
+                        color: currentpage == 3
+                            ? AppColors.secondaryColor
+                            : AppColors.primaryColor,
+                        bgColor: currentpage == 3
+                            ? AppColors.primaryColor
+                            : AppColors.secondaryColor,
                       ),
                       // MenuItem(
                       //   title: 'Autres',

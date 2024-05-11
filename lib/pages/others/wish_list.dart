@@ -1,11 +1,8 @@
-import 'package:belle_house_mobile_app/pages/properties/houses_list.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/important_item.dart';
-import 'package:belle_house_mobile_app/widgets/nearly_property.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Important extends StatelessWidget {
   const Important({super.key});
