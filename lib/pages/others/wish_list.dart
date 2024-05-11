@@ -11,28 +11,29 @@ class Important extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: AppColors.backgroundColor,
-          body: Column(
-            children: [
-              //heading
-              Expanded(
-                  flex: 1,
-                  child: Center(
-                    child: BigText(
-                      text: "Mes Favories",
-                      fontSize: Dimension.sizeTwelve * 2,
-                    ),
-                  )),
-              Expanded(
-                flex: 7,
-                child: ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (context, index) {
-                      return ImportantItem();
-                    }),
-              ),
-            ],
-          )),
+        backgroundColor: AppColors.backgroundColor,
+        body: Column(
+          children: [
+            //heading
+            Expanded(
+                flex: 1,
+                child: Center(
+                  child: BigText(
+                    text: "Mes Favories",
+                    fontSize: Dimension.sizeTwelve * 2,
+                  ),
+                )),
+            Expanded(
+              flex: 7,
+              child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return ImportantItem();
+                  }),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

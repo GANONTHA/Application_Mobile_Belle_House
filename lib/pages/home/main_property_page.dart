@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/pages/home/most_popular_page.dart';
 import 'package:belle_house_mobile_app/pages/home/property_page_builder.dart';
 import 'package:belle_house_mobile_app/pages/properties/house_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
@@ -35,7 +36,7 @@ class MainPropertyPage extends StatelessWidget {
                         ),
                       ),
                       MenuItem(
-                        action: () => {},
+                        action: () => {Get.to(() => const PopularPage())},
                         title: 'Voir+',
                         color: AppColors.iconColor1,
                       ),
