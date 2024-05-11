@@ -2,6 +2,7 @@ import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/important_item.dart';
+import 'package:belle_house_mobile_app/widgets/most_popular_widget.dart';
 import 'package:flutter/material.dart';
 
 class PopularPage extends StatefulWidget {
@@ -31,7 +32,7 @@ class _PopularPageState extends State<PopularPage> {
             child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) {
-                  return ImportantItem();
+                  return MostPoplarWidget();
                 }),
           ),
         ],
