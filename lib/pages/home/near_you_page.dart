@@ -1,7 +1,6 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
-import 'package:belle_house_mobile_app/widgets/most_popular_widget.dart';
 import 'package:belle_house_mobile_app/widgets/nearest_property_widget.dart';
 import 'package:flutter/material.dart';
 

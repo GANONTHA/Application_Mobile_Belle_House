@@ -1,3 +1,4 @@
+import 'package:belle_house_mobile_app/pages/home/near_you_page.dart';
 import 'package:belle_house_mobile_app/pages/properties/land_details.dart';
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
@@ -29,7 +30,7 @@ class LandList extends StatelessWidget {
                   ),
                 ),
                 MenuItem(
-                  action: () => {},
+                  action: () => {Get.to(() => const NearestPropertiesPage())},
                   title: 'Voir+',
                   color: AppColors.iconColor1,
                 ),
@@ -38,7 +39,7 @@ class LandList extends StatelessWidget {
             SizedBox(height: Dimension.sizeFive),
             GestureDetector(
               onTap: () {
-                Get.to(() => LandDetailState());
+                Get.to(() => const LandDetailState());
               },
               child: ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),

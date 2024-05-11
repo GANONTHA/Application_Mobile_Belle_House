@@ -148,19 +148,6 @@ class _NaviMenuState extends State<NaviMenu> {
                       ),
                       MenuItem(
                         action: () {
-                          currentpage = 1;
-                          onTapNav(currentpage);
-                        },
-                        title: 'Maison',
-                        color: currentpage == 1
-                            ? AppColors.secondaryColor
-                            : AppColors.primaryColor,
-                        bgColor: currentpage == 1
-                            ? AppColors.primaryColor
-                            : AppColors.secondaryColor,
-                      ),
-                      MenuItem(
-                        action: () {
                           currentpage = 2;
                           onTapNav(currentpage);
                         },
@@ -169,6 +156,19 @@ class _NaviMenuState extends State<NaviMenu> {
                             ? AppColors.secondaryColor
                             : AppColors.primaryColor,
                         bgColor: currentpage == 2
+                            ? AppColors.primaryColor
+                            : AppColors.secondaryColor,
+                      ),
+                      MenuItem(
+                        action: () {
+                          currentpage = 1;
+                          onTapNav(currentpage);
+                        },
+                        title: 'Maisons',
+                        color: currentpage == 1
+                            ? AppColors.secondaryColor
+                            : AppColors.primaryColor,
+                        bgColor: currentpage == 1
                             ? AppColors.primaryColor
                             : AppColors.secondaryColor,
                       ),
