@@ -2,16 +2,17 @@ import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
 import 'package:belle_house_mobile_app/widgets/most_popular_widget.dart';
+import 'package:belle_house_mobile_app/widgets/nearest_property_widget.dart';
 import 'package:flutter/material.dart';
 
-class PopularPage extends StatefulWidget {
-  const PopularPage({super.key});
+class NearestPropertiesPage extends StatefulWidget {
+  const NearestPropertiesPage({super.key});
 
   @override
-  State<PopularPage> createState() => _PopularPageState();
+  State<NearestPropertiesPage> createState() => _NearestPropertiesPageState();
 }
 
-class _PopularPageState extends State<PopularPage> {
+class _NearestPropertiesPageState extends State<NearestPropertiesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +20,7 @@ class _PopularPageState extends State<PopularPage> {
       appBar: AppBar(
         surfaceTintColor: AppColors.primaryColor,
         title: BigText(
-          text: 'Les Plus Populaires',
+          text: 'Les Plus Proches de Vous',
           fontSize: Dimension.paddingTwenty,
           color: AppColors.primaryColor,
         ),
@@ -31,7 +32,7 @@ class _PopularPageState extends State<PopularPage> {
             child: ListView.builder(
                 itemCount: 5,
                 itemBuilder: (context, index) {
-                  return MostPoplarWidget();
+                  return NearestPropertiesWidget();
                 }),
           ),
         ],
