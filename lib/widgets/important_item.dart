@@ -1,6 +1,7 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
+import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
@@ -26,19 +27,35 @@ class ImportantItem extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Container(
-              // color: AppColors.iconColor1,
+            child: Stack(
+              children: [
+                Positioned(
+                  child: Container(
+                    // color: AppColors.iconColor1,
 
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(Dimension.paddingTen),
-                  topRight: Radius.circular(Dimension.paddingTen),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(Dimension.paddingTen),
+                        topRight: Radius.circular(Dimension.paddingTen),
+                      ),
+                      image: const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/images/house-1.jpg'),
+                      ),
+                    ),
+                  ),
                 ),
-                image: const DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/house-1.jpg'),
+                const Positioned(
+                  right: 5,
+                  top: 0,
+                  child: IconElement(
+                      size: 24,
+                      icon: Icons.highlight_remove_outlined,
+                      color: AppColors.secondaryColor,
+                      radius: 50,
+                      height: 40),
                 ),
-              ),
+              ],
             ),
           ),
           Expanded(
