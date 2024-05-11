@@ -1,10 +1,8 @@
 import 'package:belle_house_mobile_app/utils/colors.dart';
 import 'package:belle_house_mobile_app/utils/dimensions.dart';
 import 'package:belle_house_mobile_app/widgets/big_text.dart';
-import 'package:belle_house_mobile_app/widgets/icon_component.dart';
 import 'package:belle_house_mobile_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ImportantItem extends StatelessWidget {
   const ImportantItem({super.key});
@@ -64,14 +62,18 @@ class ImportantItem extends StatelessWidget {
                         ],
                       ),
                       BigText(
-                        text: 'Location',
+                        text: 'En Location',
                         fontSize: Dimension.sizeThirtheen,
+                        color: AppColors.primaryColor,
                       ),
                     ],
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
                             height: Dimension.sizeFourthy,
@@ -88,6 +90,7 @@ class ImportantItem extends StatelessWidget {
                           SizedBox(width: Dimension.paddingTen),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               BigText(
                                 text: "Belle House",
